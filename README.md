@@ -25,6 +25,11 @@ Toolset:
 ### Create new component
 `yarn gen component Name` — place new component files in src/components including CSS module and story.
 
+src/components/Name/
+├── Name.tsx
+├── Name.module.css
+├── Name.stories.tsx
+
 `yarn gen component Name --withLazy=true` — like first, but add index.ts file with default lazy export of component for federation, pages and etc.
 
 ---
