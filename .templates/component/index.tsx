@@ -1,11 +1,16 @@
 import React, { lazy, Suspense } from 'react';
 
-const LazyTemplateName = lazy(() => import('./TemplateName').then(module => ({ default: module.TemplateName })));
+const LazyTemplateName = lazy(() =>
+	import('./TemplateName').then((module) => ({ default: module.TemplateName }))
+);
 
-const TemplateName = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
+const TemplateName = (
+	props: JSX.IntrinsicAttributes & { children?: React.ReactNode }
+) => (
 	<Suspense fallback={null}>
 		<LazyTemplateName {...props} />
 	</Suspense>
 );
 
-export default TemplateName;
+export type { TemplateNameProps } from './TemplateName';
+export { TemplateName };

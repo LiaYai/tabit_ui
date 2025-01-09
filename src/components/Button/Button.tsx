@@ -17,6 +17,7 @@ export function Button({
 }: ButtonProps) {
 	return (
 		<button
+			data-testid="Button"
 			type={type}
 			onClick={onClick}
 			disabled={disabled}

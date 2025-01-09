@@ -59,9 +59,9 @@ export const InteractionTest: Story = {
 		const consoleSpy = spyOn(console, 'log');
 
 		const canvas = within(canvasElement);
-		const button = canvas.getByRole('button');
-		await expect(button).toBeInTheDocument();
-		button.click();
+		const element = canvas.getByTestId('Button');
+		await expect(element).toBeInTheDocument();
+		element.click();
 		await expect(consoleSpy).toHaveBeenCalledWith('Button clicked!'); // Проверяем вызов
 		consoleSpy.mockRestore();
 	},
