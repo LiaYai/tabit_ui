@@ -1,7 +1,7 @@
 {
 	"name": "@tabit/ui",
 	"private": true,
-	"version": "1.0.0",
+	"version": "0.0.0-semantic-release",
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/src/index.d.ts",
@@ -25,7 +25,8 @@
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
 		"test-storybook": "test-storybook",
-		"test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"yarn build-storybook && yarn http-server storybook-static --port 6006 --silent\" \"npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook\""
+		"storybook-server": "yarn build-storybook && http-server storybook-static --port 6006 --silent",
+		"test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"green,blue\" \"yarn storybook-server\" \"wait-on tcp:127.0.0.1:6006 && yarn test-storybook\""
 	},
 	"peerDependencies": {
 		"react": "^18.3.1",
@@ -33,6 +34,8 @@
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "3.2.3",
+		"@commitlint/cli": "^19.6.1",
+		"@commitlint/config-conventional": "^19.6.0",
 		"@eslint/js": "^9.17.0",
 		"@laynezh/vite-plugin-lib-assets": "^0.6.1",
 		"@storybook/addon-essentials": "8.4.7",
@@ -98,7 +101,8 @@
 	},
 	"lint-staged": {
 		"src/**/*.{ts,tsx}": [
-			"yarn lint"
+			"yarn lint",
+			"yarn test"
 		],
 		"src/**/*": "yarn format"
 	},

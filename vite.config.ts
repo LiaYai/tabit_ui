@@ -59,6 +59,9 @@ export default defineConfig({
 		sourcemap: true,
 		minify: true,
 		rollupOptions: {
+			manualChunks: {
+				vendor: ['react', 'react-dom'],
+			},
 			external: ['react', 'react-dom', 'react/jsx-runtime'],
 			output: {
 				assetFileNames: 'assets/[name].[ext]',
