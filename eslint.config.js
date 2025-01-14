@@ -1,15 +1,20 @@
 import js from '@eslint/js';
-import globals from 'globals';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import jest from 'eslint-plugin-jest';
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import react from 'eslint-plugin-react';
 
 export default tseslint.config(
 	{ ignores: ['dist', 'src/stories'] },
 	{
-		extends: [js.configs.recommended, ...tseslint.configs.recommendedTypeChecked],
+		extends: [
+			js.configs.recommended,
+			jest.configs['flat/recommended'],
+			...tseslint.configs.recommendedTypeChecked,
+		],
 		files: ['**/*.{ts,tsx}'],
 		languageOptions: {
 			ecmaVersion: 2020,
@@ -33,6 +38,10 @@ export default tseslint.config(
 			],
 			...react.configs.recommended.rules,
 			...react.configs['jsx-runtime'].rules,
+			...jest.configs['flat/recommended'].rules,
+			'@typescript-eslint/no-unsafe-assignment': 'off',
+			'@typescript-eslint/no-unsafe-call': 'off',
+			'@typescript-eslint/no-unsafe-member-access': 'off',
 		},
 	},
 	eslintConfigPrettier

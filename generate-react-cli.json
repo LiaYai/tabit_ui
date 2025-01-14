@@ -10,13 +10,28 @@
         "component": ".templates/component/TemplateName.tsx",
         "style": ".templates/component/TemplateName.module.scss",
         "story": ".templates/component/TemplateName.stories.tsx",
-        "lazy": ".templates/component/index.tsx"
+        "lazy": ".templates/component/index.tsx",
+        "test": ".templates/component/TemplateName.test.tsx"
       },
       "path": "src/components",
       "withStyle": true,
-      "withTest": false,
+      "withTest": true,
       "withStory": true,
       "withLazy": false
+    },
+    "lazy": {
+      "customTemplates": {
+        "component": ".templates/component/TemplateName.tsx",
+        "style": ".templates/component/TemplateName.module.scss",
+        "story": ".templates/component/TemplateName.stories.tsx",
+        "lazy": ".templates/component/index.tsx",
+        "test": ".templates/component/TemplateName.test.tsx"
+      },
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true
     }
   }
 }

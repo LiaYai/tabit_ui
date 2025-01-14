@@ -1,0 +1,1474 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Мои тестирования</title>
+		<link rel="stylesheet" href="minify/style.min.css" media="all" />
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="sidebar">
+				<div class="sidebar__logo logo">
+					<picture class="logo__img">
+						<img
+							src="img/logo.svg"
+							alt="Табит"
+							title="Табит"
+							width="208"
+							height="311"
+						/>
+					</picture>
+				</div>
+				<nav class="sidebar__menu wrap-menu">
+					<ul class="menu menu--first">
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-home"></i><span>Главная</span></a
+							>
+						</li>
+						<li class="menu__item menu__item--current">
+							<a href="#" class="menu__link"
+								><i class="icon-add"></i><span>Мои тестирования</span
+								><span class="menu__count">1</span></a
+							>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-history"></i
+								><span>История моих тестирований</span></a
+							>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-msg"></i><span>Сообщения</span></a
+							>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-alert"></i><span>Проблемы</span
+								><span class="menu__count">1</span></a
+							>
+						</li>
+					</ul>
+					<ul class="menu menu--second">
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-manage"></i
+								><span>Управление тестированиями</span></a
+							>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-results"></i
+								><span>Результаты тестирования</span></a
+							>
+							<ul class="menu__sub-menu sub-menu">
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Компании</a>
+								</li>
+								<li class="sub-menu__item">
+									<a href="#" class="sub-menu__link">Отдела</a>
+								</li>
+							</ul>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-company"></i
+								><span>Управление компанией</span></a
+							>
+						</li>
+					</ul>
+					<ul class="menu menu--third">
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-setting"></i><span>Настройка профиля</span></a
+							>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link"
+								><i class="icon-help"></i><span>Помощь</span></a
+							>
+						</li>
+						<li class="menu__item">
+							<a href="#exit" class="menu__link" data-fancybox data-src="#exit"
+								><i class="icon-exit"></i><span>Выход</span></a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="wrap-content">
+				<header class="wrap-header">
+					<div class="header">
+						<div class="header__left header-left">
+							<div class="header-left__title">Личный кабинет пользователя</div>
+							<div class="header-left__desc">
+								Проходите тестирование и следите за результатами
+							</div>
+						</div>
+						<div class="header__right header-right">
+							<div class="header-right__item">
+								<a href="#" class="header-right__link btn"
+									><span>перейти на сайт</span></a
+								>
+							</div>
+							<div class="header-right__item">
+								<div class="header-right__wrap-notification wrap-notification">
+									<a href="#" class="notification" aria-label="Уведомления">
+										<i class="notification__icon icon-notification"></i>
+										<span class="notification__data">10</span>
+									</a>
+									<div class="notification-alerts">
+										<a
+											href="#"
+											class="notification-alerts__item notification-alerts-item"
+										>
+											<i class="notification-alerts-item__icon icon-add"></i>
+											<div class="notification-alerts-item__content">
+												<div class="notification-alerts-item__date">
+													11.11.2024
+												</div>
+												<div class="notification-alerts-item__txt">
+													Напоминание о тестировании Ссылка
+													https://www.youtube.com/?reload=9&app=desktop&hl=ru
+												</div>
+											</div>
+										</a>
+										<a
+											href="#"
+											class="notification-alerts__item notification-alerts-item"
+										>
+											<i class="notification-alerts-item__icon icon-add"></i>
+											<div class="notification-alerts-item__content">
+												<div class="notification-alerts-item__date">
+													11.11.2024
+												</div>
+												<div class="notification-alerts-item__txt">
+													Напоминание о тестировании Ссылка
+													https://www.youtube.com/?reload=9&app=desktop&hl=ru
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="header-right__item">
+								<div class="header-right__wrap-user-header wrap-user-header">
+									<a href="#" class="user-header">
+										<picture class="user-header__img">
+											<source
+												srcset="./img/content/img-1.webp"
+												type="image/webp"
+											/>
+											<img
+												src="./img/content/img-1.png"
+												alt=""
+												width="151"
+												height="150"
+												loading="lazy"
+											/>
+										</picture>
+										<div class="user-header__data">
+											<div class="user-header__name">Ольга</div>
+											<div class="user-header__pos">отдел бухгалтерии</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="header-right__item">
+								<button
+									class="header-right__menu-btn menu-btn"
+									type="button"
+									aria-label="Меню"
+								>
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="content">
+					<div class="content__top-bar content-top-bar">
+						<div class="bread">
+							<div class="bread__item">
+								<a href="#" class="bread__link">Главная</a>
+							</div>
+							<div class="bread__item"><span class="bread__sep">/</span></div>
+							<div class="bread__item">
+								<span class="bread__current">Мои тестирования</span>
+							</div>
+						</div>
+						<h1 class="title">Мои тестирования</h1>
+					</div>
+					<div class="content__my-tests content-my-tests">
+						<div class="content-my-tests__icon">
+							<i class="icon-check"></i>
+						</div>
+						<div class="content-my-tests__data content-my-tests-data">
+							<h2>Тестирование завершено</h2>
+							<p>
+								По результатам последних 3-х тестирований ваше эмоциональное
+								состояние «Напряжён». Начните решать проблему прямо сейчас.
+							</p>
+						</div>
+						<div class="content-my-tests__actions content-my-tests-actions">
+							<div class="content-my-tests-actions__item">
+								<a
+									href="#add-problem"
+									class="content-my-tests-actions__btn btn btn--orange"
+									data-fancybox
+									data-src="#add-problem"
+									><span>Создать проблему</span></a
+								>
+							</div>
+							<div class="content-my-tests-actions__item">
+								<a
+									href="#test-result"
+									class="content-my-tests-actions__btn"
+									data-fancybox
+									data-src="#test-result"
+									><span>Посмотреть результаты</span></a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="edit" style="display: none" class="wrap-modal">
+			<div class="modal">
+				<div class="modal-title">Редактировать тестирование</div>
+				<div class="modal-content">
+					<form action="#" class="form form--modal">
+						<div class="form__item">
+							<span class="form__label">Тип тестирования</span>
+							<select
+								class="form__select select"
+								title="Определение эмоционального состояния"
+							>
+								<option>Тип 1</option>
+								<option>Тип 2</option>
+								<option>Тип 3</option>
+								<option>Тип 4</option>
+								<option>Тип 5</option>
+							</select>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Задать даты тестирований</span>
+							<div class="form__wrap-dates-test wrap-dates-test">
+								<div class="form__dates-test dates-test">
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+											value="12.12.2023"
+											disabled
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+											value="01.01.2024"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+											value="15.02.2024"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+											value="29.03.2024"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+										/>
+									</div>
+								</div>
+								<div class="form__dates-test dates-test dates-test--time">
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__timepicker timepicker"
+											placeholder="--:--"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Статус</span>
+							<select class="form__select select select--status" title="Статус">
+								<option selected>В работе</option>
+								<option>Завершён</option>
+								<option>Отменен</option>
+								<option>Отложен</option>
+							</select>
+						</div>
+						<div class="form__item">
+							<label class="form__checkbox checkbox">
+								<input type="checkbox" class="checkbox__input" />
+								<span class="checkbox__txt">Удалить тестирование</span>
+							</label>
+						</div>
+						<div class="form__item">
+							<div class="form__btns form-btns">
+								<div class="form-btns__item">
+									<button class="form__btn" type="button" data-fancybox-close>
+										<span>Отменить</span>
+									</button>
+								</div>
+								<div class="form-btns__item">
+									<button class="form__btn btn btn--orange" type="submit">
+										<span>Сохранить</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="add-test" style="display: none" class="wrap-modal">
+			<div class="modal">
+				<div class="modal-title">Создать тестирование</div>
+				<div class="modal-content">
+					<form action="#" class="form form--modal">
+						<div class="form__item">
+							<span class="form__label">Тип тестирования</span>
+							<select
+								class="form__select select"
+								title="Определение эмоционального состояния"
+							>
+								<option>Тип 1</option>
+								<option>Тип 2</option>
+								<option>Тип 3</option>
+								<option>Тип 4</option>
+								<option>Тип 5</option>
+							</select>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Задать даты тестирований</span>
+							<div class="form__wrap-dates-test wrap-dates-test">
+								<div class="form__dates-test dates-test">
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+										/>
+									</div>
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__datepicker datepicker"
+											placeholder="-- -- ----"
+										/>
+									</div>
+								</div>
+								<div class="form__dates-test dates-test dates-test--time">
+									<div class="dates-test__item">
+										<input
+											type="text"
+											class="dates-test__timepicker timepicker"
+											placeholder="--:--"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="form__btns form-btns">
+								<div class="form-btns__item">
+									<button class="form__btn" type="button" data-fancybox-close>
+										<span>Отменить</span>
+									</button>
+								</div>
+								<div class="form-btns__item">
+									<button class="form__btn btn btn--orange" type="submit">
+										<span>Сохранить</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="add-employee" style="display: none" class="wrap-modal">
+			<div class="modal">
+				<div class="modal-title">Добавление сотрудника</div>
+				<div class="modal-content">
+					<form action="#" class="form form--modal">
+						<div class="form__item">
+							<span class="form__label">ФИО</span>
+							<input
+								type="text"
+								class="form__input"
+								placeholder=" "
+								id="name"
+								name="name"
+								required
+							/>
+							<label for="name" class="form__placeholder"
+								>Иванов Иван Иванович</label
+							>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Адрес электронной почты</span>
+							<input
+								type="email"
+								class="form__input"
+								placeholder=" "
+								id="email"
+								name="email"
+								required
+							/>
+							<label for="email" class="form__placeholder"
+								>example@mail.com</label
+							>
+						</div>
+						<div class="form__items">
+							<div class="form__item">
+								<span class="form__label">Телеграм</span>
+								<input
+									type="text"
+									class="form__input"
+									placeholder=" "
+									id="tg"
+									name="tg"
+									required
+								/>
+								<label for="tg" class="form__placeholder">@name</label>
+							</div>
+							<div class="form__item">
+								<span class="form__label">Номер телефона</span>
+								<input
+									type="tel"
+									class="form__input"
+									placeholder=" "
+									id="phone"
+									name="phone"
+									required
+								/>
+								<label for="phone" class="form__placeholder"
+									><span>+7</span> (999) 999 99 99</label
+								>
+							</div>
+						</div>
+						<div class="form__items">
+							<div class="form__item">
+								<span class="form__label">Дата приёма на работу</span>
+								<div class="wrap-datepicker">
+									<input
+										type="text"
+										class="datepicker"
+										placeholder="-- -- ----"
+									/>
+								</div>
+							</div>
+							<div class="form__item">
+								<span class="form__label">Отдел</span>
+								<select class="form__select select" title="Отдел">
+									<option>Маркетинг</option>
+									<option>ВЭД</option>
+									<option>Безопасности</option>
+									<option>Продажи</option>
+								</select>
+							</div>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Должность</span>
+							<input
+								type="text"
+								class="form__input"
+								placeholder=" "
+								id="leader"
+								name="leader"
+								required
+							/>
+							<label for="leader" class="form__placeholder"
+								>Руководитель отдела безопасности</label
+							>
+						</div>
+						<div class="form__item">
+							<div class="form__btns form-btns">
+								<div class="form-btns__item">
+									<button class="form__btn" type="button" data-fancybox-close>
+										<span>Отменить</span>
+									</button>
+								</div>
+								<div class="form-btns__item">
+									<button class="form__btn btn btn--orange" type="submit">
+										<span>Добавить сотрудника</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="add-dep" style="display: none" class="wrap-modal">
+			<div class="modal">
+				<div class="modal-title">Создание нового отдела</div>
+				<div class="modal-content">
+					<form action="#" class="form form--modal">
+						<div class="form__item">
+							<span class="form__label">Название отдела</span>
+							<input
+								type="text"
+								class="form__input"
+								placeholder=" "
+								id="dep"
+								name="dep"
+								required
+							/>
+							<label for="dep" class="form__placeholder"
+								>Отдел безопасности</label
+							>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Руководитель</span>
+							<select
+								class="form__select select"
+								title="Руководитель отдела безопасности"
+							>
+								<option>Отдел 1</option>
+								<option>Отдел 2</option>
+								<option>Отдел 3</option>
+								<option>Отдел 4</option>
+							</select>
+						</div>
+						<div class="form__item">
+							<div class="form__btns form-btns">
+								<div class="form-btns__item">
+									<button class="form__btn" type="button" data-fancybox-close>
+										<span>Отменить</span>
+									</button>
+								</div>
+								<div class="form-btns__item">
+									<button class="form__btn btn btn--orange" type="submit">
+										<span>Добавить отдел</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div
+			id="test-result"
+			style="display: none"
+			class="wrap-modal wrap-modal--results"
+		>
+			<div class="modal">
+				<div class="modal-sub-title">Результаты тестирования</div>
+				<div class="modal-title">Воодушевлён</div>
+				<div class="modal-content">
+					<p>
+						В данной статье рассматриваются различные подходы к определению
+						понятий «удовлетворённость» и «лояльность», значение
+						удовлетворённости клиентов для современных торговых организаций.
+						Описываются факторы, оказывающие влияние
+						на удовлетворённость и лояльность потребителя. Делаются выводы
+						о том, что в потребительской лояльности выделяют, в основном,
+						показатели поведенческой и воспринимаемой лояльности, которые
+						связаны с поведением потребителя и его эмоциональной составляющей.
+						В данной статье рассматриваются различные подходы к определению
+						понятий «удовлетворённость» и «лояльность», значение
+						удовлетворённости клиентов для современных торговых организаций.
+						Описываются факторы, оказывающие влияние
+						на удовлетворённость и лояльность потребителя. Делаются выводы
+						о том, что в потребительской лояльности выделяют, в основном,
+						показатели поведенческой и воспринимаемой лояльности, которые
+						связаны с поведением потребителя и его эмоциональной составляющей.
+						В данной статье рассматриваются различные подходы к определению
+						понятий «удовлетворённость» и «лояльность», значение
+					</p>
+				</div>
+				<div class="modal-actions">
+					<a href="#" class="modal-back-link" data-fancybox-close
+						>К истории тетирований</a
+					>
+				</div>
+			</div>
+		</div>
+		<div id="saved" style="display: none" class="wrap-modal wrap-modal--info">
+			<div class="modal">
+				<div class="modal-img"><i class="icon-check"></i></div>
+				<div class="modal-title modal-title--center">данные сохранены</div>
+			</div>
+		</div>
+		<div id="exit" style="display: none" class="wrap-modal">
+			<div class="modal">
+				<div class="modal-title modal-title--center">
+					Вы уверены, что хотите выйти?
+				</div>
+				<div class="modal-content">
+					<form action="#" class="form form--modal">
+						<div class="form__item">
+							<div class="form__btns form-btns">
+								<div class="form-btns__item">
+									<button
+										class="form__btn btn btn--orange"
+										type="button"
+										data-fancybox-close
+									>
+										<span>Остаться</span>
+									</button>
+								</div>
+								<div class="form-btns__item">
+									<button class="form__btn" type="submit">
+										<span>Выйти</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div
+			id="add-problem"
+			style="display: none"
+			class="wrap-modal wrap-modal--wide wrap-modal--quiz"
+		>
+			<div class="modal">
+				<form action="#" class="modal-quiz">
+					<div class="modal-quiz-step modal-quiz-step--1 is-show">
+						<div class="modal-quiz-step-number">Шаг 1/2</div>
+						<div class="modal-title">Создать проблему</div>
+						<div class="modal-content">
+							<div class="form form--modal">
+								<div class="form__items form__items--wide-1">
+									<div class="form__item">
+										<span class="form__label">Тип проблемы</span>
+										<select
+											class="form__select select select--circle"
+											title="Выберите тип проблемы"
+										>
+											<option>Взаимодействие в коллективе</option>
+											<option>Оптимизация бизнес-процессов</option>
+											<option>Взаимодествие в отделе</option>
+											<option>Сложности с документооборотом</option>
+											<option>Сложности с регламентом</option>
+											<option>Внесение новых предложений</option>
+										</select>
+									</div>
+									<div class="form__item">
+										<span class="form__label">Цвет проблемы</span>
+										<select
+											class="form__select select select--circle select--color"
+											title="Выберите цвет"
+										>
+											<option class="blue">Синий</option>
+											<option class="burgundy">Бордовый</option>
+											<option class="red">Красный</option>
+											<option class="brown">Коричневый</option>
+											<option class="black">Чёрный</option>
+											<option class="yellow">Жёлтый</option>
+											<option class="gray">Серый</option>
+											<option class="green" data-value="green">Зелёный</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__item">
+									<span class="form__label">Название проблемы</span>
+									<input
+										type="text"
+										class="form__input"
+										placeholder=" "
+										id="problem"
+										name="problem"
+										required
+									/>
+									<label for="problem" class="form__placeholder"
+										>Напишите название проблемы</label
+									>
+								</div>
+								<div class="form__item">
+									<span class="form__label">Описание проблемы</span>
+									<div class="form__wrap-textarea">
+										<textarea
+											class="form__textarea"
+											placeholder="Опишите проблему, не затрагивая личность, например: сложное взаимодействие между отделом продаж и бухгалтерией — это затягивает подписание докуметов и закрытие сделок."
+										></textarea>
+										<div class="form__file file">
+											<input
+												type="file"
+												class="file__input"
+												id="file111"
+												hidden
+											/>
+											<label for="file111" class="file__label"
+												><i class="icon-attach"></i><span>файл</span></label
+											>
+											<div class="form-file-loaded"></div>
+										</div>
+									</div>
+								</div>
+								<div class="form__item">
+									<div class="form__btns form-btns form-btns--left">
+										<div class="form-btns__item">
+											<button
+												class="form__btn btn btn--orange btn--next"
+												type="button"
+											>
+												<span>Следующий шаг</span>
+											</button>
+										</div>
+										<div class="form-btns__item">
+											<button
+												class="form__btn"
+												type="button"
+												data-fancybox-close
+											>
+												<span>Отменить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-quiz-step modal-quiz-step--2">
+						<div class="modal-quiz-step-number">Шаг 2/2</div>
+						<div class="modal-title">Создать проблему</div>
+						<div class="modal-title-desc">
+							Сформируйте команду для решения проблемы
+						</div>
+						<div class="modal-content">
+							<div class="form form--modal">
+								<div class="form__item">
+									<span class="form__label">Название поля</span>
+									<div class="wrap-selects wrap-selects--tags">
+										<div class="wrap-results-filter">
+											<div class="custom-select">
+												<div class="custom-select__wrap-title">
+													<div
+														class="custom-select__results-filter-data results-filter-data"
+													></div>
+													<div class="custom-select__title">
+														+ Добавить сотрудника
+													</div>
+												</div>
+												<div
+													class="custom-select__dropdown-menu dropdown-menu"
+												></div>
+												<select
+													multiple
+													class="custom-select__list select-filter"
+													style="display: none"
+												>
+													<option data-filter="employee-1" value="Сотрудник 1">
+														Сотрудник 1
+													</option>
+													<option data-filter="employee-2" value="Сотрудник 2">
+														Сотрудник 2
+													</option>
+													<option data-filter="employee-3" value="Сотрудник 3">
+														Сотрудник 3
+													</option>
+													<option data-filter="employee-4" value="Сотрудник 4">
+														Сотрудник 4
+													</option>
+												</select>
+											</div>
+											<div class="results-filter-sum">0</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__item">
+									<span class="form__label">Название поля</span>
+									<div class="wrap-selects wrap-selects--tags">
+										<div class="wrap-results-filter">
+											<div class="custom-select">
+												<div class="custom-select__wrap-title">
+													<div
+														class="custom-select__results-filter-data results-filter-data"
+													></div>
+													<div class="custom-select__title">
+														+ Добавить сотрудника
+													</div>
+												</div>
+												<div
+													class="custom-select__dropdown-menu dropdown-menu"
+												></div>
+												<select
+													multiple
+													class="custom-select__list select-filter"
+													style="display: none"
+												>
+													<option data-filter="employee-1" value="Сотрудник 1">
+														Сотрудник 1
+													</option>
+													<option data-filter="employee-2" value="Сотрудник 2">
+														Сотрудник 2
+													</option>
+													<option data-filter="employee-3" value="Сотрудник 3">
+														Сотрудник 3
+													</option>
+													<option data-filter="employee-4" value="Сотрудник 4">
+														Сотрудник 4
+													</option>
+												</select>
+											</div>
+											<div class="results-filter-sum">0</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__item">
+									<span class="form__label">Название поля</span>
+									<div class="wrap-selects wrap-selects--tags">
+										<div class="wrap-results-filter">
+											<div class="custom-select">
+												<div class="custom-select__wrap-title">
+													<div
+														class="custom-select__results-filter-data results-filter-data"
+													></div>
+													<div class="custom-select__title">
+														+ Добавить сотрудника
+													</div>
+												</div>
+												<div
+													class="custom-select__dropdown-menu dropdown-menu"
+												></div>
+												<select
+													multiple
+													class="custom-select__list select-filter"
+													style="display: none"
+												>
+													<option data-filter="employee-1" value="Сотрудник 1">
+														Сотрудник 1
+													</option>
+													<option data-filter="employee-2" value="Сотрудник 2">
+														Сотрудник 2
+													</option>
+													<option data-filter="employee-3" value="Сотрудник 3">
+														Сотрудник 3
+													</option>
+													<option data-filter="employee-4" value="Сотрудник 4">
+														Сотрудник 4
+													</option>
+												</select>
+											</div>
+											<div class="results-filter-sum">0</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__item">
+									<div class="form__btns form-btns form-btns--left">
+										<div class="form-btns__item">
+											<button class="form__btn btn btn--orange" type="submit">
+												<span>Создать проблему</span>
+											</button>
+										</div>
+										<div class="form-btns__item">
+											<button
+												class="form__btn"
+												type="button"
+												data-fancybox-close
+											>
+												<span>Отменить</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div
+			id="add-meeting"
+			style="display: none"
+			class="wrap-modal wrap-modal--wide"
+		>
+			<div class="modal">
+				<div class="modal-title">Создать встречу</div>
+				<div class="modal-content">
+					<form action="#" class="form form--modal form--meeting">
+						<div class="form__item">
+							<span class="form__label">Тема встречи</span>
+							<input
+								type="text"
+								class="form__input"
+								placeholder=" "
+								id="tema"
+								name="tema"
+								required
+							/>
+							<label for="tema" class="form__placeholder"
+								>Напишите тему встречи</label
+							>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Описание встречи</span>
+							<div class="form__wrap-textarea">
+								<textarea
+									class="form__textarea"
+									placeholder="Напишите о чем будет встреча, какие вопросы вы планируете обсудить"
+									maxlength="1000"
+								></textarea>
+								<div class="form__file file">
+									<input
+										type="file"
+										class="file__input"
+										id="file-111"
+										hidden
+										multiple
+									/>
+									<label for="file-111" class="file__label"
+										><i class="icon-attach"></i><span>файл</span></label
+									>
+									<div class="form-file-loaded"></div>
+								</div>
+							</div>
+							<div class="form__count-textarea">
+								<span>0</span> / <span class="max-length">0</span>
+							</div>
+						</div>
+						<div class="form__items">
+							<div class="form__item">
+								<span class="form__label">Дата</span>
+								<div class="wrap-datepicker">
+									<input
+										type="text"
+										class="datepicker"
+										placeholder="Выберите дату"
+									/>
+								</div>
+							</div>
+							<div class="form__item">
+								<span class="form__label">Место</span>
+								<input
+									type="text"
+									class="form__input"
+									placeholder=" "
+									id="place"
+									name="place"
+									required
+								/>
+								<label for="place" class="form__placeholder"
+									>Напишите тему встречи</label
+								>
+							</div>
+						</div>
+						<div class="form__tasks"></div>
+						<div class="form__item">
+							<div class="form__btns form-btns form-btns--left">
+								<div class="form-btns__item">
+									<button
+										class="form__btn btn btn--orange"
+										type="submit"
+										data-fancybox
+										data-src="#saved-data"
+									>
+										<span>Сохранить</span>
+									</button>
+								</div>
+								<div class="form-btns__item">
+									<button class="form__btn btn-show-task" type="button">
+										<span>Добавить задачу</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div
+			id="saved-data"
+			style="display: none"
+			class="wrap-modal wrap-modal--info"
+		>
+			<div class="modal">
+				<div class="modal-img"><i class="icon-check"></i></div>
+				<div class="modal-title modal-title--center">данные сохранены</div>
+				<div class="modal-content modal-content--center">
+					<p>
+						Вы можете просматривать информацию о встрече на странице
+						<a href="#">Проблемы</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div
+			id="saved-error"
+			style="display: none"
+			class="wrap-modal wrap-modal--info is-error"
+		>
+			<div class="modal">
+				<div class="modal-img"><i class="icon-close2"></i></div>
+				<div class="modal-title modal-title--center">Ошибка</div>
+				<div class="modal-content modal-content--center">
+					<p>У вас не хватает прав для совершения этого действия</p>
+				</div>
+			</div>
+		</div>
+		<div
+			id="add-task"
+			style="display: none"
+			class="wrap-modal wrap-modal--wide"
+		>
+			<div class="modal">
+				<div class="modal-title">Создать задачу</div>
+				<div class="modal-content">
+					<form action="#" class="form form--modal form--meeting">
+						<div class="form__item">
+							<span class="form__label"
+								>Выберите встречу, для которой ставите задачу</span
+							>
+							<input
+								type="text"
+								class="form__input"
+								placeholder=" "
+								id="tema2"
+								name="tema2"
+								required
+							/>
+							<label for="tema2" class="form__placeholder"
+								>Напишите тему встречи</label
+							>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Название задачи</span>
+							<input
+								type="text"
+								class="form__input"
+								placeholder=" "
+								id="task"
+								name="task"
+								required
+							/>
+							<label for="task" class="form__placeholder"
+								>Напишите название задачи</label
+							>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Описание задачи</span>
+							<div class="form__wrap-textarea">
+								<textarea
+									class="form__textarea"
+									placeholder="Подробно опишите задачу, какой результат вы хотите видеть"
+									maxlength="1000"
+								></textarea>
+								<div class="form__file file">
+									<input
+										type="file"
+										class="file__input"
+										id="file-1111"
+										hidden
+										multiple
+									/>
+									<label for="file-1111" class="file__label"
+										><i class="icon-attach"></i><span>файл</span></label
+									>
+									<div class="form-file-loaded"></div>
+								</div>
+							</div>
+							<div class="form__count-textarea">
+								<span>0</span> / <span class="max-length">0</span>
+							</div>
+						</div>
+						<div class="form__items">
+							<div class="form__item">
+								<span class="form__label">Дата</span>
+								<div class="wrap-datepicker">
+									<input
+										type="text"
+										class="datepicker"
+										placeholder="Выберите дату"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="form__item">
+							<span class="form__label">Выберите исполнителя</span>
+							<div class="wrap-selects wrap-selects--tags">
+								<div class="wrap-results-filter">
+									<div class="custom-select">
+										<div class="custom-select__wrap-title">
+											<div
+												class="custom-select__results-filter-data results-filter-data"
+											></div>
+											<div class="custom-select__title">
+												+ Добавить сотрудника
+											</div>
+										</div>
+										<div
+											class="custom-select__dropdown-menu dropdown-menu"
+										></div>
+										<select
+											multiple
+											class="custom-select__list select-filter"
+											style="display: none"
+										>
+											<option data-filter="employee-1" value="Илья Михайлов">
+												Илья Михайлов
+											</option>
+											<option data-filter="employee-2" value="Сотрудник 2">
+												Сотрудник 2
+											</option>
+											<option data-filter="employee-3" value="Сотрудник 3">
+												Сотрудник 3
+											</option>
+											<option data-filter="employee-4" value="Сотрудник 4">
+												Сотрудник 4
+											</option>
+										</select>
+									</div>
+									<div class="results-filter-sum">0</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__tasks"></div>
+						<div class="form__item">
+							<div class="form__btns form-btns form-btns--left">
+								<div class="form-btns__item">
+									<button
+										class="form__btn btn btn--orange"
+										type="submit"
+										data-fancybox
+										data-src="#saved-data"
+									>
+										<span>Сохранить</span>
+									</button>
+								</div>
+								<div class="form-btns__item">
+									<button class="form__btn btn-show-task" type="button">
+										<span>Добавить задачу</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div
+			id="meeting"
+			style="display: none"
+			class="wrap-modal wrap-modal--meeting wrap-modal--wide-778"
+		>
+			<div class="modal">
+				<div class="modal-meeting-title">
+					<i class="icon-check"></i><span>Проведена</span>
+				</div>
+				<div class="modal-meeting-sub-title">
+					Проблема: Взаимодействие в коллективе
+				</div>
+				<div class="modal-title">
+					Тема встречи: Обсуждение процесса подписания документов
+				</div>
+				<div class="modal-meeting-desc">
+					<div class="modal-meeting-desc__title">Описание встречи</div>
+					<div class="modal-meeting-desc__content">
+						<p>
+							Cложное взаимодействие между отделом продаж и бухгалтерией —
+							это затягивает подписание докуметов и закрытие сделок.
+						</p>
+					</div>
+				</div>
+				<div class="modal-content">
+					<form action="#" class="form">
+						<div class="form__item is-loaded">
+							<div class="form__file file">
+								<input
+									type="file"
+									class="file__input"
+									id="file-555"
+									hidden
+									multiple
+								/>
+								<label for="file-555" class="file__label"
+									><i class="icon-attach"></i><span>файл</span></label
+								>
+								<div class="form-file-loaded">
+									<div class="form-file-loaded__item docx">
+										<i class="icon-doc"></i>
+										<span>docx</span>
+									</div>
+									<div class="form-file-loaded__item jpeg">
+										<i class="icon-doc"></i>
+										<span>jpeg</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__items">
+							<div class="form__item">
+								<span class="form__label">Дата</span>
+								<div class="wrap-datepicker">
+									<input
+										type="text"
+										class="datepicker flatpickr-input"
+										placeholder="Выберите дату"
+										value="11.11.2024"
+										disabled
+									/>
+								</div>
+							</div>
+							<div class="form__item">
+								<span class="form__label">Место</span>
+								<input
+									type="text"
+									class="form__input"
+									placeholder=" "
+									id="place2"
+									name="place2"
+									value="202"
+									disabled
+								/>
+								<label for="place2" class="form__placeholder"
+									>Напишите тему встречи</label
+								>
+							</div>
+						</div>
+						<div class="about-problem-team-actions">
+							<div class="about-problem-team-actions__title">Участники</div>
+							<div class="about-problem-team-actions__links">
+								<a href="#">Илья Михайлов</a><a href="#">Илья Соловьёв</a>
+							</div>
+						</div>
+						<div class="about-problem-team-actions">
+							<div class="about-problem-team-actions__title">
+								Активных задач: <a href="#">3</a>
+							</div>
+							<div class="about-problem-team-actions__links">
+								<a
+									href="#add-task"
+									class="about-problem-team-actions__link"
+									data-fancybox
+									data-src="#add-task"
+									>+ Добавить задачу</a
+								>
+							</div>
+						</div>
+						<div class="modal-meeting-results">
+							<div class="modal-meeting-results__title">Результат встречи</div>
+							<div class="modal-meeting-results__items">
+								<div class="modal-meeting-results__item">
+									<div class="modal-meeting-results__label">
+										Как прошла встреча
+									</div>
+								</div>
+								<div class="modal-meeting-results__item">
+									<select
+										class="modal-meeting-results__select select select--circle"
+										title="Как прошла встреча"
+									>
+										<option selected>Отлично</option>
+										<option>Плохо</option>
+									</select>
+								</div>
+							</div>
+							<div class="modal-meeting-results__items">
+								<div class="modal-meeting-results__item">
+									<div class="modal-meeting-results__label">
+										Все участники были заинтересованы в решении проблемы?
+									</div>
+								</div>
+								<div class="modal-meeting-results__item">
+									<select
+										class="modal-meeting-results__select select select--circle"
+										title="Все участники были заинтересованы в решении проблемы?"
+									>
+										<option selected>Да</option>
+										<option>Нет</option>
+									</select>
+								</div>
+							</div>
+							<div class="modal-meeting-results__items">
+								<div class="modal-meeting-results__item">
+									<div class="modal-meeting-results__label">
+										Удалось найти решение в рамках встречи?
+									</div>
+								</div>
+								<div class="modal-meeting-results__item">
+									<select
+										class="modal-meeting-results__select select select--circle"
+										title="Удалось найти решение в рамках встречи?"
+									>
+										<option selected>Да</option>
+										<option>Нет</option>
+									</select>
+								</div>
+							</div>
+							<div class="modal-meeting-results__items">
+								<div class="modal-meeting-results__item">
+									<div class="modal-meeting-results__label">
+										Напишите чем была полезна эта встреча именно для вас?
+									</div>
+								</div>
+								<div class="modal-meeting-results__item">
+									<textarea
+										class="modal-meeting-results__textarea"
+										placeholder="Напишите чем была полезна эта встреча именно для вас?"
+									>
+Начали работать над сложившейся ситуацией, планируем решить её до конца месяца</textarea
+									>
+								</div>
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="form__btns form-btns form-btns--left">
+								<div class="form-btns__item">
+									<button class="form__btn btn btn--orange" type="submit">
+										<span>Сохранить изменения</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div
+			id="task-modal"
+			style="display: none"
+			class="wrap-modal wrap-modal--meeting wrap-modal--wide-778"
+		>
+			<div class="modal">
+				<div class="modal-meeting-title">
+					<i class="icon-check"></i><span>Завершена</span>
+				</div>
+				<div class="modal-meeting-sub-title">
+					Тема встречи: Обсуждение бизнес-процессов
+				</div>
+				<div class="modal-title">
+					Задача: Предложить идеи для разработки нового регламента
+				</div>
+				<div class="modal-meeting-desc">
+					<div class="modal-meeting-desc__title">Описание задачи</div>
+					<div class="modal-meeting-desc__content">
+						<p>
+							Подготовить идеи для нового регламента, чтобы ускорить процесс
+							взаимодействия между коллегами, ознакомиться с документацией
+						</p>
+					</div>
+				</div>
+				<div class="modal-content">
+					<form action="#" class="form">
+						<div class="form__item is-loaded">
+							<div class="form__file file">
+								<input
+									type="file"
+									class="file__input"
+									id="file-5555"
+									hidden
+									multiple
+								/>
+								<label for="file-5555" class="file__label"
+									><i class="icon-attach"></i><span>файл</span></label
+								>
+								<div class="form-file-loaded">
+									<div class="form-file-loaded__item docx">
+										<i class="icon-doc"></i>
+										<span>docx</span>
+									</div>
+									<div class="form-file-loaded__item jpeg">
+										<i class="icon-doc"></i>
+										<span>jpeg</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form__items">
+							<div class="form__item">
+								<span class="form__label">Дата</span>
+								<div class="wrap-datepicker">
+									<input
+										type="text"
+										class="datepicker flatpickr-input"
+										placeholder="Выберите дату"
+										value="11.11.2024"
+										disabled
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="about-problem-team-actions">
+							<div class="about-problem-team-actions__title">Исполнитель</div>
+							<div class="about-problem-team-actions__links">
+								<a href="#">Илья Михайлов</a><a href="#">Илья Соловьёв</a>
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="form__btns form-btns form-btns--left">
+								<div class="form-btns__item">
+									<button class="form__btn btn btn--orange" type="submit">
+										<span>Завершить</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="minify/vendors.min.js"></script>
+		<script src="minify/common.min.js"></script>
+	</body>
+</html>

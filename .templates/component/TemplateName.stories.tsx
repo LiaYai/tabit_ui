@@ -4,14 +4,11 @@ import { expect, within } from '@storybook/test';
 import { TemplateName } from './TemplateName';
 
 const meta = {
-	title: 'New/TemplateName',
+	title: 'Components/TemplateName',
 	component: TemplateName,
+	tags: ['autodocs'],
 	parameters: {
-		// More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
 		layout: 'centered',
-		// viewport: {
-		// 	defaultViewport: 'desktop',
-		// },
 	},
 } satisfies Meta<typeof TemplateName>;
 
@@ -19,7 +16,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on interaction testing: https://storybook.js.org/docs/writing-tests/interaction-testing
-export const WithStateChanged: Story = {
+export const InteractionTest: Story = {
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 		const element = canvas.getByTestId('TemplateName');

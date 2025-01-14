@@ -1,14 +1,29 @@
-import clsx from 'clsx';
+import React from 'react';
+
 import styles from './Button.module.scss';
 
 export type ButtonProps = {
-	className?: string;
+	type?: 'button' | 'submit' | 'reset';
+	onClick?: () => void;
+	disabled?: boolean;
+	children: React.ReactNode;
 };
 
-export function Button({ className }: ButtonProps) {
+export function Button({
+	type = 'button',
+	onClick,
+	disabled = false,
+	children,
+}: ButtonProps) {
 	return (
-		<div className={clsx(styles.container, className)} data-testid="Button">
-			Button
-		</div>
+		<button
+			data-testid="Button"
+			type={type}
+			onClick={onClick}
+			disabled={disabled}
+			className={`${styles.button} ${disabled ? styles.disabled : ''}`}
+		>
+			{children}
+		</button>
 	);
 }
