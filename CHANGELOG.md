@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Studio-Yandex-Practicum/tabit_ui/compare/v1.0.0...v1.1.0) (2025-01-15)
+
+
+### Features
+
+* **shadcn:** added shadcn/ui config, added font and icon ([1b27c59](https://github.com/Studio-Yandex-Practicum/tabit_ui/commit/1b27c596f9a10f7432e12dd64989f2279cb5d8a3))
+
 # 1.0.0 (2025-01-14)
 
 
