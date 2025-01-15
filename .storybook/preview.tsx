@@ -1,10 +1,16 @@
+import { withThemeByClassName } from '@storybook/addon-themes';
 import type { Preview } from '@storybook/react';
+import '@styles/index.scss';
 import i18n from '../src/i18n';
 import { LocaleDecorator } from './LocaleDecorator.tsx';
-import "@styles/index.scss";
 
 const preview: Preview = {
 	parameters: {
+		darkMode: {
+			classTarget: 'html',
+			darkClass: 'dark',
+			lightClass: 'light',
+		},
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
@@ -36,7 +42,17 @@ const preview: Preview = {
 			},
 		},
 	},
-	decorators: [LocaleDecorator],
+	decorators: [
+		LocaleDecorator,
+		withThemeByClassName({
+			themes: {
+				light: 'light',
+				dark: 'dark',
+				auto: 'auto',
+			},
+			defaultTheme: 'light',
+		}),
+	],
 	globalTypes: {
 		locale: {
 			name: 'Locale',
