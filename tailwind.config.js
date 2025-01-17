@@ -52,6 +52,10 @@ export default {
 					4: 'hsl(var(--chart-4))',
 					5: 'hsl(var(--chart-5))',
 				},
+				switch: {
+					DEFAULT: 'hsl(var(--switch-primary))',
+					foreground: 'hsl(var(--switch-foreground))',
+				},
 			},
 			fontFamily: {
 				sans: ['NunitoSans', ...defaultTheme.fontFamily.sans],
