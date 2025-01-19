@@ -2,7 +2,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 
 type SwitchProps = {
-  id: string,
+  id?: string,
   onClick?: () => void,
   checked?: boolean,
   disabled?: boolean,
