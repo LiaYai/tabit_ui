@@ -1,16 +1,17 @@
 import { Switch } from '@/components/ui/switch';
+import SwitchElement from '@/elements/switch';
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, spyOn, within } from '@storybook/test';
 
 const meta = {
 	title: 'Atoms/Switch',
-	component: Switch,
+	component: SwitchElement,
 	tags: ['autodocs'],
 	parameters: {
 		layout: 'centered',
 
 	},
-} satisfies Meta<typeof Switch>;
+} satisfies Meta<typeof SwitchElement>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -32,6 +33,34 @@ export const Disabled: Story = {
 		disabled: true,
 	},
 };
+
+export const CheckedDisabled: Story = {
+	args: {
+		checked: true,
+		disabled: true,
+	},
+};
+
+export const WithLabel: Story = {
+	args: {
+		label: 'Label',
+	},
+};
+
+export const DisabledWithLabel: Story = {
+	args: {
+		label: 'Label',
+		disabled: true,
+	},
+};
+
+export const CheckedDisabledWithLabel: Story = {
+	args: {
+		label: 'Label',
+		checked: true,
+		disabled: true,
+	},
+}
 
 export const InteractionTest: Story = {
 	args: {
