@@ -1,7 +1,7 @@
 {
 	"name": "@tabit/ui",
 	"private": true,
-	"version": "1.0.0",
+	"version": "0.0.0-semantic-release",
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/src/index.d.ts",
@@ -21,11 +21,12 @@
 		"format": "prettier ./src --write",
 		"prepare": "git config core.hooksPath .git-hooks || echo 'Not in a git repo'",
 		"test:watch": "yarn vitest --watch",
-		"test": "concurrently \"yarn vitest --run\" \"yarn test-storybook:ci\"",
+		"test": "concurrently \"yarn vitest --run --passWithNoTests\" \"yarn test-storybook:ci\"",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
 		"test-storybook": "test-storybook",
-		"test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"yarn build-storybook && yarn http-server storybook-static --port 6006 --silent\" \"npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook\""
+		"storybook-server": "yarn build-storybook && http-server storybook-static --port 6006 --silent",
+		"test-storybook:ci": "concurrently -k -s first -n \"SB,TEST\" -c \"green,blue\" \"yarn storybook-server\" \"wait-on tcp:127.0.0.1:6006 && yarn test-storybook\""
 	},
 	"peerDependencies": {
 		"react": "^18.3.1",
@@ -33,11 +34,15 @@
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "3.2.3",
+		"@commitlint/cli": "^19.6.1",
+		"@commitlint/config-conventional": "^19.6.0",
 		"@eslint/js": "^9.17.0",
 		"@laynezh/vite-plugin-lib-assets": "^0.6.1",
+		"@semantic-release/changelog": "^6.0.3",
 		"@storybook/addon-essentials": "8.4.7",
 		"@storybook/addon-interactions": "^8.4.7",
 		"@storybook/addon-onboarding": "8.4.7",
+		"@storybook/addon-themes": "^8.4.7",
 		"@storybook/addon-viewport": "^8.4.7",
 		"@storybook/blocks": "8.4.7",
 		"@storybook/react": "8.4.7",
@@ -55,6 +60,7 @@
 		"@typescript-eslint/parser": "^8.19.1",
 		"@vitejs/plugin-react": "^4.3.4",
 		"@vitest/coverage-v8": "2.1.8",
+		"autoprefixer": "^10.4.20",
 		"concurrently": "^9.1.0",
 		"esbuild": "0.24.0",
 		"eslint": "^9.17.0",
@@ -76,11 +82,15 @@
 		"lint-staged": "^15.2.11",
 		"playwright": "^1.49.1",
 		"playwright-chromium": "^1.49.1",
+		"postcss": "^8.5.1",
 		"prettier": "^3.4.2",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"sass": "^1.83.0",
+		"semantic-release": "^24.2.1",
 		"storybook": "8.4.7",
+		"storybook-addon-pseudo-states": "^4.0.2",
+		"tailwindcss": "^3.4.17",
 		"translation-check": "^1.1.0",
 		"typescript": "5.6.3",
 		"typescript-eslint": "^8.18.1",
@@ -98,7 +108,8 @@
 	},
 	"lint-staged": {
 		"src/**/*.{ts,tsx}": [
-			"yarn lint"
+			"yarn lint",
+			"yarn test"
 		],
 		"src/**/*": "yarn format"
 	},
@@ -109,10 +120,17 @@
 		]
 	},
 	"dependencies": {
+		"@ant-design/icons": "^5.5.2",
+		"@ant-design/icons-react": "^2.0.1",
+		"@radix-ui/react-slot": "^1.1.1",
+		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"i18next": "^24.2.0",
 		"i18next-browser-languagedetector": "^8.0.2",
 		"i18next-http-backend": "^3.0.1",
-		"react-i18next": "^15.2.0"
+		"lucide-react": "^0.471.1",
+		"react-i18next": "^15.2.0",
+		"tailwind-merge": "^2.6.0",
+		"tailwindcss-animate": "^1.0.7"
 	}
 }

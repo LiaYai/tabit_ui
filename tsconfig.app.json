@@ -23,6 +23,7 @@
 		"noUncheckedSideEffectImports": true,
 
 		/* Aliases */
+		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"],
 			"@public/*": ["./public/*"],

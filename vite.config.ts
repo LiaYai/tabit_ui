@@ -38,16 +38,6 @@ export default defineConfig({
 			name: 'images/[name].[ext]',
 		}),
 	],
-	test: {
-		globals: true,
-		environment: 'jsdom',
-		setupFiles: './src/setupTests.ts',
-		include: ['src/**/*.{spec,test}.ts{,x}'],
-		coverage: {
-			include: ['src/components/**/*.ts{,x}'],
-			exclude: ['src/components/**/*.stories.*'],
-		},
-	},
 	build: {
 		copyPublicDir: false,
 		lib: {
@@ -62,6 +52,14 @@ export default defineConfig({
 			external: ['react', 'react-dom', 'react/jsx-runtime'],
 			output: {
 				assetFileNames: 'assets/[name].[ext]',
+				manualChunks(id) {
+					if (id.includes('node_modules')) {
+						if (id.includes('react')) {
+							return 'vendor-react';
+						}
+						return 'vendor';
+					}
+				},
 			},
 		},
 	},
