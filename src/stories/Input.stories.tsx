@@ -96,7 +96,8 @@ export const InteractionTest: Story = {
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 
-		const inputElement = canvas.getByTestId('Input');
+		const inputElement = canvas.getByTestId('Input') as HTMLInputElement;
+
 		await expect(inputElement).toBeInTheDocument();
 
 		await inputElement.focus();
