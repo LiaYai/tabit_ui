@@ -27,8 +27,12 @@ const inputVariants = cva(
 export interface InputProps
 	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>,
 		VariantProps<typeof inputVariants> {
+	className?: string;
+	variant?: 'default' | 'disabled' | 'error' | 'ghost';
+	size?: 'default';
+	message?: string;
+	type?: string;
 	icon?: React.ReactNode;
-	error?: React.ReactNode;
 	tooltipMessage?: string;
 }
 
