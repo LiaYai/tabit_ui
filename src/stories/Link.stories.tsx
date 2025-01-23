@@ -10,7 +10,7 @@ const meta = {
 	argTypes: {
 		size: {
 			control: { type: 'select' },
-			options: ['default', 'sm', 'lg', 'icon'],
+			options: ['default', 'sm', 'lg'],
 			description: 'Size variant of the link',
 		},
 		iconLeft: {
@@ -20,10 +20,6 @@ const meta = {
 		iconRight: {
 			control: 'boolean',
 			description: 'Show/hide right icon',
-		},
-		quantity: {
-			control: 'number',
-			description: 'Numeric badge value (optional)',
 		},
 		href: {
 			control: 'text',
@@ -38,7 +34,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// Default (FullFeatured) link
+/** Дефолтный link */
 export const Default: Story = {
 	args: {
 		children: 'Мои тестирования',
@@ -48,7 +44,7 @@ export const Default: Story = {
 	},
 };
 
-// Link with left icon
+/** Link с правой иконкой */
 export const WithLeftIcon: Story = {
 	args: {
 		children: 'Мои тестирования',
@@ -57,7 +53,7 @@ export const WithLeftIcon: Story = {
 	},
 };
 
-// Link with right icon
+/** Link с левой иконкой */
 export const WithRightIcon: Story = {
 	args: {
 		children: 'Мои тестирования',
@@ -66,46 +62,23 @@ export const WithRightIcon: Story = {
 	},
 };
 
-// Link with quantity and Icons
-export const WithIconsQuantity: Story = {
-	args: {
-		children: 'Мои тестирования',
-		href: 'javascript:void(0)',
-		iconLeft: <AppstoreAddOutlined />,
-		iconRight: <DownOutlined />,
-		quantity: 5,
-	},
-};
-
-// Link with quantity
-export const WithOnlyQuantity: Story = {
-	args: {
-		children: 'Мои тестирования',
-		href: 'javascript:void(0)',
-		quantity: 5,
-	},
-};
-
-// Interactive test
+/** Интерактивный тест */
 export const InteractiveTest: Story = {
 	args: {
 		children: 'Click me',
-		// Убираем переход по ссылке
 		href: 'javascript:void(0)',
 		iconLeft: <AppstoreAddOutlined />,
 		iconRight: <DownOutlined />,
-		quantity: 1,
 		size: 'default',
-		// Обработчик onClick остается опциональным
 		onClick: () => console.log('Link clicked!'),
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
 		const link = canvas.getByRole('link');
 
-		// Проверяем, что ссылка существует
+		/** Проверяем, что ссылка существует*/
 		await expect(link).toBeInTheDocument();
-		// Проверяем, что атрибут href установлен
+		/** Проверяем, что атрибут href установлен*/
 		await expect(link).toHaveAttribute('href', 'javascript:void(0)');
 	},
 };
