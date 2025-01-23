@@ -13,7 +13,23 @@ export default {
 			},
 			colors: {
 				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				foreground: {
+					DEFAULT: 'hsl(var(--foreground))',
+					foreground: 'hsl(var(--foreground-error))',
+				},
+				input: {
+					DEFAULT: 'hsl(var(--input))',
+					foreground: 'hsl(var(--input-foreground))',
+					disabled: 'hsl(var(--input-disabled))',
+					ghost: 'transparent',
+				},
+				border: {
+					DEFAULT: 'hsl(var(--border))',
+					foreground: 'hsl(var(--border-foreground))',
+					error: 'hsl(var(--border-error))',
+					hover: 'hsl(var(--border-hover))',
+					active: 'hsl(var(--border-active))',
+				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
@@ -42,8 +58,8 @@ export default {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))',
 				},
-				border: 'hsl(var(--border))',
-				input: 'hsl(var(--input))',
+				// border: 'hsl(var(--border))',
+				// input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				chart: {
 					1: 'hsl(var(--chart-1))',
