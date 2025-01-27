@@ -27,7 +27,16 @@
 		--chart-3: 197 37% 24%;
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
-		--radius: 0.5rem;
+		--radius: 24px;
+		--primary-main: theme('colors.primary.main');
+		--secondary-main: theme('colors.secondary.main');
+		--info-main: theme('colors.info.main');
+		--success-main: theme('colors.success.main');
+		--warning-main: theme('colors.warning.main');
+		--error-main: theme('colors.error.main');
+		--grey-500: theme('colors.grey.500');
+		--common-black: theme('colors.common.black');
+		--common-white: theme('colors.common.white');
 	}
 
 	.dark {
