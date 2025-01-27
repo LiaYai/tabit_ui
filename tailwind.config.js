@@ -14,6 +14,10 @@ export default {
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				link: {
+					DEFAULT: 'hsla(var(--text-disabled))',
+					foreground: 'hsla(var(--text-primary))',
+				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
@@ -55,6 +59,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['NunitoSans', ...defaultTheme.fontFamily.sans],
+				manrope: ['Manrope', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},
