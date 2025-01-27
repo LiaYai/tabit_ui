@@ -1,3 +1,4 @@
+// scss\index.scss
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,6 +29,8 @@
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
 		--radius: 0.5rem;
+		--text-disabled: hsla(210, 13%, 62%, 1);
+		--text-primary: hsla(211, 24%, 17%, 1);
 	}
 
 	.dark {
@@ -45,6 +48,7 @@
 		--muted-foreground: 0 0% 63.9%;
 		--accent: 0 0% 14.9%;
 		--accent-foreground: 0 0% 98%;
+
 		--destructive: 0 62.8% 30.6%;
 		--destructive-foreground: 0 0% 98%;
 		--border: 0 0% 14.9%;
@@ -83,6 +87,8 @@
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
 		--radius: 0.5rem;
+		--text-disabled: hsla(210, 13%, 62%, 1);
+		--text-primary: hsla(211, 24%, 17%, 1);
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -111,6 +117,8 @@
 			--chart-3: 30 80% 55%;
 			--chart-4: 280 65% 60%;
 			--chart-5: 340 75% 55%;
+			--text-disabled: hsla(210, 13%, 62%, 1);
+			--text-primary: hsla(211, 24%, 17%, 1);
 		}
 	}
 }
@@ -163,6 +171,15 @@
 				url(/fonts/Inter-SemiBold/Inter-SemiBold.woff2) format('woff2'),
 				url(/fonts/Inter-SemiBold/Inter-SemiBold.woff) format('woff');
 			font-weight: 600;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: Manrope;
+			font-display: swap;
+			src:
+				url(/fonts/Manrope-Medium/Manrope-Medium.woff2) format('woff2'),
+				url(/fonts/Manrope-Medium/Manrope-Medium.woff) format('woff');
+			font-weight: 500;
 			font-style: normal;
 		}
 	}
