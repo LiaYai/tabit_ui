@@ -1,4 +1,4 @@
-import { FileInput } from '@/components/ui/input';
+import { FileInput } from '@/components/ui/fileinput';
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, spyOn, within } from '@storybook/test';
 
@@ -57,7 +57,7 @@ export const MultipleFiles: Story = {
 export const WithAcceptedTypes: Story = {
 	args: {
 		type: 'file',
-		accept: '.png,.jpg,.jpeg',
+		accept: '.docx,.doc,.jpeg,.jpg',
 	},
 };
 

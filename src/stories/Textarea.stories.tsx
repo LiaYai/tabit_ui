@@ -27,7 +27,7 @@ type Story = StoryObj<typeof meta>;
 // <Textarea variant="default">Default</Textarea>
 export const Default: Story = {
 	args: {
-		placeholder: 'Text',
+		placeholder: 'text',
 	},
 };
 
