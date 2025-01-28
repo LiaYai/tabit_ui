@@ -16,20 +16,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const data = [
-	'Взаимодействие в коллективе',
-	'Оптимизация бизнес-процессов',
-	'Взаимодествие в отделе',
-	'Стратегические лидеры',
-	'Тактические лидеры',
-	'Новые сотрудники',
-	'Опытные сотрудники',
+	'Новая',
+	'В работе',
+	'Приостановлена',
+	'Завершена'
 ];
 
 export const Default: Story = {
 	args: {
 		items: data,
 		selected: [],
-		placeholder: 'Тип проблемы',
+		placeholder: 'Статус',
 		onChange: (selected) => {
 			console.log(selected);
 		},
@@ -39,8 +36,8 @@ export const Default: Story = {
 export const WithPreselectedItems: Story = {
 	args: {
 		items: data,
-		selected: ['Взаимодействие в коллективе', 'Взаимодествие в отделе'],
-		placeholder: 'Тип проблемы',
+		selected: ['Новая', 'Завершена'],
+		placeholder: 'Статус',
 		onChange: (selected) => {
 			console.log(selected);
 		},
@@ -51,8 +48,8 @@ export const WithSelectedAll: Story = {
 	args: {
 		items: data,
 		selected: [],
-		selectedAllLabel: 'Все проблемы',
-		placeholder: 'Тип проблемы',
+		selectedAllLabel: 'Все',
+		placeholder: 'Статус',
 		onChange: (selected) => {
 			console.log(selected);
 		},
@@ -64,7 +61,7 @@ export const WithSearch: Story = {
 		items: data,
 		selected: [],
 		search: true,
-		placeholder: 'Тип проблемы',
+		placeholder: 'Статус',
 		onChange: (selected) => {
 			console.log(selected);
 		},
@@ -73,10 +70,10 @@ export const WithSearch: Story = {
 
 export const InteractionTest: Story = {
 	args: {
-		selectedAllLabel: 'Все проблемы',
+		selectedAllLabel: 'Все',
 		items: data,
-		selected: ['Взаимодействие в коллективе', 'Взаимодествие в отделе'],
-		placeholder: 'Тип проблемы',
+		selected: ['Новая', 'Завершена'],
+		placeholder: 'Статус',
 		onChange: (selected) => {
 			console.log(selected);
 		},
@@ -100,13 +97,11 @@ export const InteractionTest: Story = {
 
 		// Определяем выбранные элементы
 		const selected = [
-			'Взаимодействие в коллективе',
-			'Взаимодествие в отделе',
-			'Оптимизация бизнес-процессов',
+			'Новая',
 		];
 
 		// Проверяем наличие элемента с текстом "Оптимизация бизнес-процессов"
-		const item = screen.getByText('Оптимизация бизнес-процессов');
+		const item = screen.getByText('Завершена');
 		await expect(item).toBeInTheDocument();
 
 		// Кликаем по элементу

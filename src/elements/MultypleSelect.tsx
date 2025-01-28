@@ -47,14 +47,14 @@ export const MultipleSelect = ({
 					variant="outline"
 					role="combobox"
 					aria-expanded={open}
-					className="w-fit justify-between text-sm border-blue-400 shadow-none relative"
+					className="w-fit justify-between border text-sm border-gray-500/20 shadow-none relative text-gray-500 hover:outline-primary hover:outline hover:outline-2 focus:outline-primary focus:outline focus:outline-2 focus-visible:outline-primary focus-visible:outline focus-visible:outline-2 hover:bg-transparent"
 				>
 					{' '}
 					{placeholder}
 					{open ? (
-						<ChevronUp className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+						<ChevronUp className="ml-2 h-4 w-4 shrink-0 stroke-gray-600" />
 					) : (
-						<ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+						<ChevronDown className="ml-2 h-4 w-4 shrink-0 stroke-gray-600" />
 					)}
 					{count > 0 && (
 						<div className="inline-flex absolute -top-2 -right-2 items-center justify-center w-4 h-4 p-0.5 text-xs/none font-bold bg-amber-400 text-gray-700 rounded-2xl">
@@ -64,7 +64,7 @@ export const MultipleSelect = ({
 				</Button>
 			</PopoverTrigger>
 
-			<PopoverContent className="w-fit p-0">
+			<PopoverContent className="w-fit p-0 border-gray-500/20">
 				<Command>
 					{search && <CommandInput placeholder="Поиск..." className="h-9" />}
 					<CommandList data-testid="SelectList">
@@ -82,9 +82,9 @@ export const MultipleSelect = ({
 								>
 									<Check
 										className={cn(
-											'mr-2 h-4 w-4 border border-gray-400 rounded',
+											'mr-2 h-4 w-4 border border-gray-600 rounded',
 											isSelectedAll
-												? 'opacity-100 bg-blue-400 stroke-white border-none'
+												? 'opacity-100 bg-primary stroke-white border-none'
 												: 'stroke-transparent'
 										)}
 									/>
@@ -106,9 +106,9 @@ export const MultipleSelect = ({
 								>
 									<Check
 										className={cn(
-											'mr-2 h-4 w-4 border border-gray-400 rounded',
+											'mr-2 h-4 w-4 border border-gray-600 rounded',
 											value.includes(item)
-												? 'opacity-100 bg-blue-400 stroke-white border-none'
+												? 'opacity-100 bg-primary stroke-white border-none'
 												: 'stroke-transparent'
 										)}
 									/>
