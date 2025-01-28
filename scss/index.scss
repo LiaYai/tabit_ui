@@ -28,8 +28,14 @@
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
 		--radius: 0.5rem;
-		--switch-primary: 230 58% 49%;
-		--switch-foreground: 221 100% 94%;
+		--switch-unchecked: 210 13% 62%;
+		--default: 211 24% 17%; 	
+		--primary_sw: 220 100% 54%;// цвета из макета переменная занята
+		--secondary_sw: 267 100% 60%;// цвета из макета переменная занята
+		--info: 189 100% 43%;
+		--success: 142 71% 45%;
+		--warning: 40 100% 50%;
+		--error: 11 100% 59%;
 	}
 
 	.dark {
@@ -85,9 +91,13 @@
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
 		--radius: 0.5rem;
-		--switch-primary: 230 58% 49%;
-		--switch-foreground: 221 100% 94%;
-		;
+		--default: 211 24% 17%; // цвета из макета	
+		--primary: 220 100% 54%;
+		--secondary: 267 100% 60%;
+		--info: 189 100% 43%;
+		--success: 142 71% 45%;
+		--warning: 40 100% 50%;
+		--error: 11 100% 59%;
 	}
 
 	@media (prefers-color-scheme: dark) {

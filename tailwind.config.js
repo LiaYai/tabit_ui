@@ -1,3 +1,5 @@
+import { error } from 'console';
+
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
 export default {
@@ -14,6 +16,13 @@ export default {
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				default: 'hsl(var(--default))',
+				primary_sw: 'hsl(var(--primary_sw))', // цвета из макета переменная занята
+				secondary_sw: 'hsl(var(--secondary_sw))',// цвета из макета переменная занята
+				info: 'hsl(var(--info))',
+				success: 'hsl(var(--success))',
+				warning: 'hsl(var(--warning))',
+				error: 'hsl(var(--error))',
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
@@ -53,8 +62,7 @@ export default {
 					5: 'hsl(var(--chart-5))',
 				},
 				switch: {
-					DEFAULT: 'hsl(var(--switch-primary))',
-					foreground: 'hsl(var(--switch-foreground))',
+					unchecked: 'hsl(var(--switch-unchecked))',
 				},
 			},
 			fontFamily: {

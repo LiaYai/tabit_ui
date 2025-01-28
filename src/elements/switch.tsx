@@ -1,21 +1,16 @@
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
+import { Switch, SwitchProps } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
 
-type SwitchProps = {
-  id?: string,
-  onClick?: () => void,
-  checked?: boolean,
-  disabled?: boolean,
-  label?: string
-}
+type SwitchElementProps = SwitchProps & {
+	id?: string;
+	label?: string;
+};
 
-const SwitchElement = ({id, label, ...props}: SwitchProps) => {
-  return (
-    <>
-      <Switch id={id} {...props}/>
-      {label && <Label htmlFor={id}>{label}</Label>}
-    </>
-  )
-}
-
-export default SwitchElement
+export const SwitchElement = ({ id, label, ...props }: SwitchElementProps) => {
+	return (
+		<div className="flex items-center">
+			<Switch id={id} {...props} />
+			{label && <Label htmlFor={id}>{label}</Label>}
+		</div>
+	);
+};
