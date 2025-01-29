@@ -55,6 +55,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['NunitoSans', ...defaultTheme.fontFamily.sans],
+				manrope: ['Manrope', ...defaultTheme.fontFamily.sans]
 			},
 		},
 	},
