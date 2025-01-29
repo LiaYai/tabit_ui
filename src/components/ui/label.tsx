@@ -182,6 +182,7 @@ const Label = ({
 		<span
 			className={labelVariants({ variant, labelColor, className })}
 			style={labelStyle}
+			data-testid="Label"
 			{...props}
 		>
 			{iconBefore && <span>{iconBefore}</span>}
