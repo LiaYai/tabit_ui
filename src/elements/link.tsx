@@ -7,7 +7,7 @@ const linkVariants = cva(
 	{
 		variants: {
 			variant: {
-				link: 'text-primary no-underline-offset-4 hover:no-underline',
+				link: 'text-grey-500 no-underline-offset-4 hover:no-underline',
 				disabled: 'opacity-50 pointer-events-none cursor-not-allowed',
 			},
 			size: {
@@ -38,12 +38,12 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
 	) => {
 		const calculatedVariant = disabled ? 'disabled' : variant;
 		const linkStyle = {
-			'--text-default': 'var(--text-disabled)',
-			'--text-hover': 'var(--text-disabled)',
-			'--text-active': 'var(--text-primary)',
-			'--icon-default': 'var(--text-primary)',
-			'--icon-hover': 'var(--text-primary)',
-			'--icon-active': 'var(--text-disabled)',
+			'--text-default': 'hsl(var(--grey-500))',
+			'--text-hover': 'hsl(var(--grey-500))',
+			'--text-active': 'hsl(var(--grey-800))',
+			'--icon-default': 'hsl(var(--grey-800))',
+			'--icon-hover': 'hsl(var(--grey-800))',
+			'--icon-active': 'hsl(var(--grey-500))',
 		} as React.CSSProperties;
 
 		return (
