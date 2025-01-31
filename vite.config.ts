@@ -6,6 +6,7 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
+import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -14,10 +15,20 @@ export default defineConfig({
 			'@': resolve(__dirname, './src'),
 			'@public': resolve(__dirname, './public'),
 			'@styles': resolve(__dirname, './scss'),
+			'@icons': resolve(__dirname, './icons'),
 		},
 	},
 	plugins: [
 		react(),
+		svgr({
+			svgrOptions: {
+				exportType: 'named',
+				ref: true,
+				svgo: false,
+				titleProp: true,
+			},
+			include: '**/*.svg',
+		}),
 		libInjectCss(),
 		dts({
 			tsconfigPath: 'tsconfig.app.json',
