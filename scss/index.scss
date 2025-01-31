@@ -29,8 +29,8 @@
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
 		--radius: 0.5rem;
-		--text-disabled: hsla(210, 13%, 62%, 1);
-		--text-primary: hsla(211, 24%, 17%, 1);
+		--grey-500: 210 13% 62%;
+		--grey-800: 211 24% 17%;
 	}
 
 	.dark {
@@ -87,8 +87,10 @@
 		--chart-4: 43 74% 66%;
 		--chart-5: 27 87% 67%;
 		--radius: 0.5rem;
-		--text-disabled: hsla(210, 13%, 62%, 1);
-		--text-primary: hsla(211, 24%, 17%, 1);
+		--grey-500: 210, 13%, 62%;
+		--grey-800: 11, 24%, 17%;
+		--grey-500: 210 13% 62%;
+		--grey-800: 211 24% 17%;
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -117,8 +119,8 @@
 			--chart-3: 30 80% 55%;
 			--chart-4: 280 65% 60%;
 			--chart-5: 340 75% 55%;
-			--text-disabled: hsla(210, 13%, 62%, 1);
-			--text-primary: hsla(211, 24%, 17%, 1);
+			--grey-500: 210 13% 62%;
+			--grey-800: 211 24% 17%;
 		}
 	}
 }
