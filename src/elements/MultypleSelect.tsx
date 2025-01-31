@@ -28,16 +28,22 @@ export type SelectElementProps = {
 
 export const MultipleSelect = ({
 	items,
-	selected,
+	selected = [],
 	placeholder,
 	onChange,
 	selectedAllLabel,
 	search = false,
 }: SelectElementProps) => {
 	const [open, setOpen] = React.useState(false);
-	const [value, setValue] = React.useState(selected);
-	const [count, setCount] = React.useState(selected.length);
-	const isSelectedAll = value.length === items.length;
+	const count = selected.length;
+	const isSelectedAll = selected.length === items.length;
+
+	const toggleItem = (item: string) => {
+		const newSelected = selected.includes(item)
+			? selected.filter((v) => v !== item)
+			: [...selected, item];
+		onChange(newSelected);
+	};
 
 	return (
 		<Popover open={open} onOpenChange={setOpen}>
@@ -47,7 +53,8 @@ export const MultipleSelect = ({
 					variant="outline"
 					role="combobox"
 					aria-expanded={open}
-					className="w-fit justify-between border text-sm border-gray-500/20 shadow-none relative text-gray-500 hover:outline-primary hover:outline hover:outline-2 focus:outline-primary focus:outline focus:outline-2 focus-visible:outline-primary focus-visible:outline focus-visible:outline-2 hover:bg-transparent"
+					aria-label='Выберите элемент'
+					className="w-fit justify-between border rounded-xs text-sm border-gray-500/20 shadow-none relative text-gray-500 hover:outline-primary-main hover:bg-grey-transparent8 hover:outline hover:outline-2 focus:outline-primary focus:outline focus:outline-2 focus-visible:outline-primary-main focus-visible:outline focus-visible:outline-2 "
 				>
 					{' '}
 					{placeholder}
@@ -57,7 +64,7 @@ export const MultipleSelect = ({
 						<ChevronDown className="ml-2 h-4 w-4 shrink-0 stroke-gray-600" />
 					)}
 					{count > 0 && (
-						<div className="inline-flex absolute -top-2 -right-2 items-center justify-center w-4 h-4 p-0.5 text-xs/none font-bold bg-amber-400 text-gray-700 rounded-2xl">
+						<div className="inline-flex absolute -top-2 -right-2 items-center justify-center w-5 h-5 p-0.5 text-xs/5 font-bold bg-primary-main text-common-white rounded-full">
 							{count}
 						</div>
 					)}
@@ -75,16 +82,14 @@ export const MultipleSelect = ({
 									value="all"
 									onSelect={() => {
 										const newValue = isSelectedAll ? [] : items;
-										setValue(newValue);
 										onChange(newValue);
-										setCount(newValue.length);
 									}}
 								>
 									<Check
 										className={cn(
 											'mr-2 h-4 w-4 border border-gray-600 rounded',
 											isSelectedAll
-												? 'opacity-100 bg-primary stroke-white border-none'
+												? 'opacity-100 bg-primary-main stroke-white border-none'
 												: 'stroke-transparent'
 										)}
 									/>
@@ -95,20 +100,13 @@ export const MultipleSelect = ({
 								<CommandItem
 									key={item}
 									value={item}
-									onSelect={(currentValue) => {
-										const newValue = value.includes(currentValue)
-											? value.filter((v) => v !== currentValue)
-											: [...value, currentValue];
-										setValue(newValue);
-										onChange(newValue);
-										setCount(newValue.length);
-									}}
+									onSelect={() => toggleItem(item)}
 								>
 									<Check
 										className={cn(
 											'mr-2 h-4 w-4 border border-gray-600 rounded',
-											value.includes(item)
-												? 'opacity-100 bg-primary stroke-white border-none'
+											selected.includes(item)
+												? 'opacity-100 bg-primary-main stroke-white border-none'
 												: 'stroke-transparent'
 										)}
 									/>

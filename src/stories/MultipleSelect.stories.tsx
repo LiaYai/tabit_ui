@@ -3,6 +3,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within, spyOn } from '@storybook/test';
 import { screen, waitFor } from '@testing-library/react';
 
+const data = [
+	'Новая',
+	'В работе',
+	'Приостановлена',
+	'Завершена'
+];
+
 const meta = {
 	title: 'Atoms/MultypleSelect',
 	component: MultipleSelect,
@@ -14,13 +21,6 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const data = [
-	'Новая',
-	'В работе',
-	'Приостановлена',
-	'Завершена'
-];
 
 export const Default: Story = {
 	args: {
@@ -47,7 +47,7 @@ export const WithPreselectedItems: Story = {
 export const WithSelectedAll: Story = {
 	args: {
 		items: data,
-		selected: [],
+		selected: data,
 		selectedAllLabel: 'Все',
 		placeholder: 'Статус',
 		onChange: (selected) => {
@@ -82,35 +82,27 @@ export const InteractionTest: Story = {
 		const consoleSpy = spyOn(console, 'log');
 		const canvas = within(canvasElement);
 
-		// Проверяем наличие кнопки SelectButton
 		const element = canvas.getByTestId('SelectButton');
 		await expect(element).toBeInTheDocument();
 
-		// Кликаем по кнопке
 		element.click();
 
-		// Ожидаем появления списка SelectList
 		await waitFor(() => {
 			const list = screen.getByTestId('SelectList');
 			expect(list).toBeInTheDocument();
 		});
 
-		// Определяем выбранные элементы
 		const selected = [
 			'Новая',
 		];
 
-		// Проверяем наличие элемента с текстом "Оптимизация бизнес-процессов"
 		const item = screen.getByText('Завершена');
 		await expect(item).toBeInTheDocument();
 
-		// Кликаем по элементу
 		item.click();
 
-		// Проверяем вызов console.log с выбранными элементами
 		await expect(consoleSpy).toHaveBeenCalledWith(selected);
 
-		// Восстанавливаем оригинальную функцию console.log
 		consoleSpy.mockRestore();
 	},
 };

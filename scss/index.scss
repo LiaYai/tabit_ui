@@ -3,122 +3,54 @@
 @tailwind utilities;
 @layer base {
 	:root {
-		--background: 0 0% 100%;
-		--foreground: 0 0% 3.9%;
-		--card: 0 0% 100%;
-		--card-foreground: 0 0% 3.9%;
-		--popover: 0 0% 100%;
-		--popover-foreground: 0 0% 3.9%;
-		--primary: 220 100% 54%;
-		--primary-foreground: 0 0% 98%;
-		--secondary: 0 0% 96.1%;
-		--secondary-foreground: 0 0% 9%;
-		--muted: 0 0% 96.1%;
-		--muted-foreground: 0 0% 45.1%;
-		--accent: 0 0% 96.1%;
-		--accent-foreground: 0 0% 9%;
-		--destructive: 0 84.2% 60.2%;
-		--destructive-foreground: 0 0% 98%;
-		--border: 0 0% 89.8%;
-		--input: 0 0% 89.8%;
-		--ring: 0 0% 3.9%;
-		--chart-1: 12 76% 61%;
-		--chart-2: 173 58% 39%;
-		--chart-3: 197 37% 24%;
-		--chart-4: 43 74% 66%;
-		--chart-5: 27 87% 67%;
-		--radius: 0.5rem;
-	}
-
-	.dark {
-		--background: 0 0% 3.9%;
-		--foreground: 0 0% 98%;
-		--card: 0 0% 3.9%;
-		--card-foreground: 0 0% 98%;
-		--popover: 0 0% 3.9%;
-		--popover-foreground: 0 0% 98%;
-		--primary: 0 0% 98%;
-		--primary-foreground: 0 0% 9%;
-		--secondary: 0 0% 14.9%;
-		--secondary-foreground: 0 0% 98%;
-		--muted: 0 0% 14.9%;
-		--muted-foreground: 0 0% 63.9%;
-		--accent: 0 0% 14.9%;
-		--accent-foreground: 0 0% 98%;
-		--destructive: 0 62.8% 30.6%;
-		--destructive-foreground: 0 0% 98%;
-		--border: 0 0% 14.9%;
-		--input: 0 0% 14.9%;
-		--ring: 0 0% 83.1%;
-		--chart-1: 220 70% 50%;
-		--chart-2: 160 60% 45%;
-		--chart-3: 30 80% 55%;
-		--chart-4: 280 65% 60%;
-		--chart-5: 340 75% 55%;
-	}
-
-	html.light {
-		--background: 0 0% 100%;
-		--foreground: 0 0% 3.9%;
-		--card: 0 0% 100%;
-		--card-foreground: 0 0% 3.9%;
-		--popover: 0 0% 100%;
-		--popover-foreground: 0 0% 3.9%;
-		--primary: 220 100% 54%;
-		--primary-foreground: 0 0% 98%;
-		--secondary: 0 0% 96.1%;
-		--secondary-foreground: 0 0% 9%;
-		--muted: 0 0% 96.1%;
-		--muted-foreground: 0 0% 45.1%;
-		--accent: 0 0% 96.1%;
-		--accent-foreground: 0 0% 9%;
-		--destructive: 0 84.2% 60.2%;
-		--destructive-foreground: 0 0% 98%;
-		--border: 0 0% 89.8%;
-		--input: 0 0% 89.8%;
-		--ring: 0 0% 3.9%;
-		--chart-1: 12 76% 61%;
-		--chart-2: 173 58% 39%;
-		--chart-3: 197 37% 24%;
-		--chart-4: 43 74% 66%;
-		--chart-5: 27 87% 67%;
-		--radius: 0.5rem;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--background: 0 0% 3.9%;
-			--foreground: 0 0% 98%;
-			--card: 0 0% 3.9%;
-			--card-foreground: 0 0% 98%;
-			--popover: 0 0% 3.9%;
-			--popover-foreground: 0 0% 98%;
-			--primary: 0 0% 98%;
-			--primary-foreground: 0 0% 9%;
-			--secondary: 0 0% 14.9%;
-			--secondary-foreground: 0 0% 98%;
-			--muted: 0 0% 14.9%;
-			--muted-foreground: 0 0% 63.9%;
-			--accent: 0 0% 14.9%;
-			--accent-foreground: 0 0% 98%;
-			--destructive: 0 62.8% 30.6%;
-			--destructive-foreground: 0 0% 98%;
-			--border: 0 0% 14.9%;
-			--input: 0 0% 14.9%;
-			--ring: 0 0% 83.1%;
-			--chart-1: 220 70% 50%;
-			--chart-2: 160 60% 45%;
-			--chart-3: 30 80% 55%;
-			--chart-4: 280 65% 60%;
-			--chart-5: 340 75% 55%;
-		}
+		--radius: 24px;
+		--primary-lighter: 220 100% 95%;
+		--primary-light: 220 100% 80%;
+		--primary-main: 220 100% 54%;
+		--primary-dark: 220 98% 44%;
+		--primary-darker: 220 94% 34%;
+		--primary-gradientMain: 220 87% 38%;
+		--secondary-lighter: 277 100% 92%;
+		--secondary-light: 272 100% 76%;
+		--secondary-main: 267 100% 60%;
+		--secondary-dark: 261 76% 41%;
+		--secondary-darker: 256 86% 26%;
+		--info-lighter: 171 93% 89%;
+		--info-light: 180 86% 67%;
+		--info-main: 189 100% 43%;
+		--info-dark: 198 100% 31%;
+		--info-darker: 208 100% 20%;
+		--success-lighter: 119 88% 91%;
+		--success-light: 130 77% 70%;
+		--success-main: 142 71% 45%;
+		--success-dark: 154 78% 31%;
+		--success-darker: 166 88% 20%;
+		--warning-lighter: 48 100% 90%;
+		--warning-light: 44 100% 70%;
+		--warning-main: 40 100% 50%;
+		--warning-dark: 36 100% 36%;
+		--warning-darker: 32 100% 24%;
+		--error-lighter: 29 100% 92%;
+		--error-light: 20 100% 75%;
+		--error-main: 11 100% 59%;
+		--error-dark: 2 77% 41%;
+		--error-darker: 353 86% 26%;
+		--grey-100: 210 20% 98%;
+		--grey-200: 210 22% 96%;
+		--grey-300: 213 16% 89%;
+		--grey-400: 208 17% 80%;
+		--grey-500: 210 13% 62%;
+		--grey-600: 208 13% 45%;
+		--grey-700: 213 14% 31%;
+		--grey-800: 211 24% 17%;
+		--grey-900: 214 24% 11%;
+		--common-black: 0 0% 0%;
+		--common-white: 0 0% 100%;
 	}
 }
 
 @layer base {
 	* {
-		@apply border-border;
-
 		@font-face {
 			font-family: NunitoSans;
 			font-display: swap;
@@ -165,8 +97,5 @@
 			font-weight: 600;
 			font-style: normal;
 		}
-	}
-	body {
-		@apply bg-background text-foreground;
 	}
 }
