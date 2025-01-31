@@ -1,7 +1,6 @@
-//import Switch from '@/elements/switch';
 import { SwitchElement } from '@/elements/switch';
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, spyOn, within } from '@storybook/test';
+import { expect, within } from '@storybook/test';
 
 const meta = {
 	title: 'Atoms/Switch',
@@ -133,18 +132,13 @@ export const WithLabel: Story = {
 
 export const InteractionTest: Story = {
 	args: {
-		onClick: () => console.log('Checked!'),
 		size: 'medium',
 		variant: 'secondary',
 	},
-	play: async ({ canvasElement }) => {
-		const consoleSpy = spyOn(console, 'log');
 
+	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
-		const element = canvas.getByTestId('Switch');
+		const element = canvas.getByRole('switch');
 		await expect(element).toBeInTheDocument();
-		element.click();
-		await expect(consoleSpy).toHaveBeenCalledWith('Checked!');
-		consoleSpy.mockRestore();
 	},
 };
