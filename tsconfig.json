@@ -9,6 +9,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"],
+			"@icons/*": ["./icons/*"]
 		}
-	}
+	},
+	"include": ["svg.d.ts", ".storybook"]
 }
