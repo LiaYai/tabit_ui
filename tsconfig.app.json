@@ -27,8 +27,16 @@
 		"paths": {
 			"@/*": ["./src/*"],
 			"@public/*": ["./public/*"],
-			"@styles/*": ["./scss/*"]
+			"@styles/*": ["./scss/*"],
+			"@icons/*": ["./icons/*"]
 		}
 	},
-	"include": ["src", ".storybook/*.tsx", ".templates"]
+	"include": [
+		"src",
+		".storybook/*.tsx",
+		".templates",
+		"./*.svg",
+		"icons",
+		"svg.d.ts"
+	]
 }
