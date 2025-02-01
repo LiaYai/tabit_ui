@@ -2,7 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import React, { ReactNode } from "react";
 
 const labelVariants = cva(
-	"inline-flex items-center h-[24px] justify-center rounded-[6px] px-[6px] text-[12px] font-bold transition-colors gap-[6px]",
+	"inline-flex items-center h-[24px] justify-center rounded-[6px] px-[6px] text-[12px] font-bold transition-colors gap-[6px] min-w-[24px]",
 {
     variants: {
 		variant: {
