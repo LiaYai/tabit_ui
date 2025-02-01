@@ -3,12 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within, spyOn } from '@storybook/test';
 import { screen, waitFor } from '@testing-library/react';
 
-const data = [
-	'Новая',
-	'В работе',
-	'Приостановлена',
-	'Завершена'
-];
+const data = ['Новая', 'В работе', 'Приостановлена', 'Завершена'];
 
 const meta = {
 	title: 'Atoms/MultypleSelect',
@@ -92,9 +87,7 @@ export const InteractionTest: Story = {
 			expect(list).toBeInTheDocument();
 		});
 
-		const selected = [
-			'Новая',
-		];
+		const selected = ['Новая'];
 
 		const item = screen.getByText('Завершена');
 		await expect(item).toBeInTheDocument();

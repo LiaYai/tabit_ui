@@ -53,7 +53,7 @@ export const MultipleSelect = ({
 					variant="outline"
 					role="combobox"
 					aria-expanded={open}
-					aria-label='Выберите элемент'
+					aria-label="Выберите элемент"
 					className="w-fit justify-between border rounded-xs text-sm border-gray-500/20 shadow-none relative text-gray-500 hover:outline-primary-main hover:bg-grey-transparent8 hover:outline hover:outline-2 focus:outline-primary focus:outline focus:outline-2 focus-visible:outline-primary-main focus-visible:outline focus-visible:outline-2 "
 				>
 					{' '}
