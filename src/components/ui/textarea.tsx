@@ -13,45 +13,45 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
 		const [hasValue, setHasValue] = React.useState(!!props.defaultValue);
 
 		const baseStylesTextarea = cn(
-			'w-full min-h-[98px] resize-none overflow-auto focus:outline-none placeholder-transparent transition-all duration-150 disabled:cursor-not-allowed font-medium font-[Manrope] text-[14px] leading-[22px]',
-			disabled ? 'text-[#919EABCC]' : 'text-[#212B36]'
+			'w-full min-h-[98px] resize-none overflow-auto focus:outline-none placeholder-transparent transition-all duration-150 disabled:cursor-not-allowed font-medium font-sans text-[14px] leading-[22px]',
+			disabled ? 'text-grey-500/80' : 'text-grey-800'
 		);
 
 		const typeStylesTextarea = {
 			outlined: cn(
-				'bg-transparent border rounded-lg px-[14px] py-4',
+				'bg-transparent border rounded-xs px-[14px] py-4',
 				error
-					? 'border-[#FF5630] border-2'
+					? 'border-error-main border-2'
 					: disabled
-						? 'border-[#919EAB33]'
+						? 'border-grey-500/20'
 						: isFocused
-							? 'border-[#212B36] border-2'
-							: 'border-[#919EAB33] hover:border-[#212B36]'
+							? 'border-grey-800 border-2'
+							: 'border-grey-500/20 hover:border-grey-800'
 			),
 			filled: cn(
-				'border-none rounded-lg px-[12px] py-[24px] focus:outline-none focus:ring-0 focus:border-none',
+				'border-none rounded-xs px-[12px] py-[24px] focus:outline-none focus:ring-0 focus:border-none',
 				error
-					? 'bg-[#FF563014]'
+					? 'bg-error-transparent8'
 					: disabled
-						? 'border border-[#919EAB33] bg-[#919EAB14]'
+						? 'border border-grey-500/20 bg-grey-transparent8'
 						: isFocused
-							? 'bg-[#919EAB29]'
-							: 'bg-[#919EAB14] hover:bg-[#919EAB29]'
+							? 'bg-grey-transparent16'
+							: 'bg-grey-transparent8 hover:bg-grey-transparent16'
 			),
 			standart: cn(
 				'bg-transparent py-[19px] focus:outline-none focus:ring-0',
 				error
-					? 'border-b-2 border-[#FF5630]'
+					? 'border-b-2 border-error-main'
 					: disabled
-						? 'border-b-2 border-[#919EAB33]'
+						? 'border-b-2 border-grey-500/20'
 						: isFocused
-							? 'border-b-2 border-[#212B36]'
-							: 'border-b border-[#919EAB52] hover:border-[#212B36]'
+							? 'border-b-2 border-grey-800'
+							: 'border-b border-grey-transparent32 hover:border-grey-800'
 			),
 		};
 
 		const baseStylesLabel =
-			'absolute transition-all duration-200 pointer-events-none font-medium font-[Manrope]';
+			'absolute transition-all duration-200 pointer-events-none font-medium font-sans';
 
 		const typeStylesLabel = {
 			outlined: cn(
@@ -61,15 +61,15 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
 					: 'top-[16px] text-[14px] leading-[22px] bg-transparent',
 				error
 					? isFocused || hasValue
-						? 'text-[#FF5630]'
-						: 'text-[#919EAB]'
+						? 'text-error-main'
+						: 'text-grey-500'
 					: disabled
-						? 'text-[#919EAB]'
+						? 'text-grey-500'
 						: isFocused
-							? 'text-[#212B36]'
+							? 'text-grey-800'
 							: hasValue
-								? 'text-[#637381]'
-								: 'text-[#919EAB]'
+								? 'text-grey-600'
+								: 'text-grey-500'
 			),
 			filled: cn(
 				'left-[12px] bg-transparent',
@@ -78,15 +78,15 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
 					: 'top-[16px] text-[14px] leading-[22px] ',
 				error
 					? isFocused || hasValue
-						? 'text-[#FF5630]'
-						: 'text-[#919EAB]'
+						? 'text-error-main'
+						: 'text-grey-500'
 					: disabled
-						? 'text-[#919EAB]'
+						? 'text-grey-500'
 						: isFocused
-							? 'text-[#212B36]'
+							? 'text-grey-800'
 							: hasValue
-								? 'text-[#637381]'
-								: 'text-[#919EAB]'
+								? 'text-grey-600'
+								: 'text-grey-500'
 			),
 			standart: cn(
 				isFocused || hasValue
@@ -94,15 +94,15 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
 					: 'top-[20px] text-[14px] leading-[22px] bg-transparent',
 				error
 					? isFocused || hasValue
-						? 'text-[#FF5630]'
-						: 'text-[#919EAB]'
+						? 'text-error-main'
+						: 'text-grey-500'
 					: disabled
-						? 'text-[#919EAB]'
+						? 'text-grey-500'
 						: isFocused
-							? 'text-[#212B36]'
+							? 'text-grey-800'
 							: hasValue
-								? 'text-[#637381]'
-								: 'text-[#919EAB]'
+								? 'text-grey-600'
+								: 'text-grey-500'
 			),
 		};
 
