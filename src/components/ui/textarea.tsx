@@ -1,48 +1,147 @@
 import * as React from 'react';
 import { cn } from '@/lib/utils';
-import { FileInputDemo } from '@/elements/fileinput';
 
-const Textarea = React.forwardRef<
-	HTMLDivElement,
-	React.ComponentProps<'textarea'>
->(({ className, ...props }, ref) => {
-	// Состояние для отслеживания количества символов
-	const [charCount, setCharCount] = React.useState(0);
+interface TextareaProps extends React.ComponentProps<'textarea'> {
+	error?: boolean;
+	label?: string;
+	type?: 'outlined' | 'filled' | 'standart';
+}
 
-	const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-		setCharCount(event.target.value.length);
-		if (props.onChange) props.onChange(event);
-	};
+const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+	({ className, error, label, disabled, type = 'outlined', ...props }, ref) => {
+		const [isFocused, setIsFocused] = React.useState(false);
+		const [hasValue, setHasValue] = React.useState(!!props.defaultValue);
 
-	return (
-		<div className="flex flex-col w-[390px] my-[29px] mx-[22px]">
-			<div
-				className={cn(
-					'min-h-[94px] gap-1 rounded-md border-2 border-[rgba(198,199,201,0.3)] bg-transparent shadow-sm focus-within:ring-1 focus-within:ring-[rgba(122,140,228,1)] focus-within:border-[rgba(122,140,228,1)] hover:border-[rgba(164,176,237,1)]',
-					className
-				)}
-				ref={ref}
-			>
-				<div className="px-3 py-2 flex flex-col resize-y overflow-auto bg-transparent focus:outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50">
+		const baseStylesTextarea = cn(
+			'w-full min-h-[98px] resize-none overflow-auto focus:outline-none placeholder-transparent transition-all duration-150 disabled:cursor-not-allowed font-medium font-[Manrope] text-[14px] leading-[22px]',
+			disabled ? 'text-[#919EABCC]' : 'text-[#212B36]'
+		);
+
+		const typeStylesTextarea = {
+			outlined: cn(
+				'bg-transparent border rounded-lg px-[14px] py-4',
+				error
+					? 'border-[#FF5630] border-2'
+					: disabled
+						? 'border-[#919EAB33]'
+						: isFocused
+							? 'border-[#212B36] border-2'
+							: 'border-[#919EAB33] hover:border-[#212B36]'
+			),
+			filled: cn(
+				'border-none rounded-lg px-[12px] py-[24px] focus:outline-none focus:ring-0 focus:border-none',
+				error
+					? 'bg-[#FF563014]'
+					: disabled
+						? 'border border-[#919EAB33] bg-[#919EAB14]'
+						: isFocused
+							? 'bg-[#919EAB29]'
+							: 'bg-[#919EAB14] hover:bg-[#919EAB29]'
+			),
+			standart: cn(
+				'bg-transparent py-[19px] focus:outline-none focus:ring-0',
+				error
+					? 'border-b-2 border-[#FF5630]'
+					: disabled
+						? 'border-b-2 border-[#919EAB33]'
+						: isFocused
+							? 'border-b-2 border-[#212B36]'
+							: 'border-b border-[#919EAB52] hover:border-[#212B36]'
+			),
+		};
+
+		const baseStylesLabel =
+			'absolute transition-all duration-200 pointer-events-none font-medium font-[Manrope]';
+
+		const typeStylesLabel = {
+			outlined: cn(
+				'left-[14px]',
+				isFocused || hasValue
+					? '-top-[6px] bg-white px-1 text-[11px] leading-[12px]'
+					: 'top-[16px] text-[14px] leading-[22px] bg-transparent',
+				error
+					? isFocused || hasValue
+						? 'text-[#FF5630]'
+						: 'text-[#919EAB]'
+					: disabled
+						? 'text-[#919EAB]'
+						: isFocused
+							? 'text-[#212B36]'
+							: hasValue
+								? 'text-[#637381]'
+								: 'text-[#919EAB]'
+			),
+			filled: cn(
+				'left-[12px] bg-transparent',
+				isFocused || hasValue
+					? 'top-[8px] text-[11px] leading-[12px]'
+					: 'top-[16px] text-[14px] leading-[22px] ',
+				error
+					? isFocused || hasValue
+						? 'text-[#FF5630]'
+						: 'text-[#919EAB]'
+					: disabled
+						? 'text-[#919EAB]'
+						: isFocused
+							? 'text-[#212B36]'
+							: hasValue
+								? 'text-[#637381]'
+								: 'text-[#919EAB]'
+			),
+			standart: cn(
+				isFocused || hasValue
+					? 'top-[2px] bg-white text-[11px] leading-[12px]'
+					: 'top-[20px] text-[14px] leading-[22px] bg-transparent',
+				error
+					? isFocused || hasValue
+						? 'text-[#FF5630]'
+						: 'text-[#919EAB]'
+					: disabled
+						? 'text-[#919EAB]'
+						: isFocused
+							? 'text-[#212B36]'
+							: hasValue
+								? 'text-[#637381]'
+								: 'text-[#919EAB]'
+			),
+		};
+
+		return (
+			<div className="relative flex flex-col w-[320px]">
+				<div className="relative">
+					{label && (
+						<label
+							htmlFor="textarea"
+							className={cn(baseStylesLabel, typeStylesLabel[type], className)}
+						>
+							{label}
+						</label>
+					)}
+
 					<textarea
-						className="flex-1 w-[360px] min-h-[57px] bg-transparent resize-none focus:outline-none"
+						id="textarea"
+						ref={ref}
+						className={cn(
+							baseStylesTextarea,
+							typeStylesTextarea[type],
+							className
+						)}
 						data-testid="Textarea"
-						disabled={props.disabled}
-						onClick={props.onClick}
-						onChange={handleChange}
-						maxLength={1000}
+						disabled={disabled}
 						{...props}
+						onFocus={() => setIsFocused(true)}
+						onBlur={(e) => {
+							setIsFocused(false);
+							setHasValue(!!e.target.value);
+						}}
+						onChange={(e) => setHasValue(!!e.target.value)}
 					/>
-					<div className="mt-2">
-						<FileInputDemo />
-					</div>
 				</div>
 			</div>
+		);
+	}
+);
 
-			<div className="text-gray-500 text-sm text-right mt-1">{charCount} / 1000</div>
-		</div>
-	);
-});
 Textarea.displayName = 'Textarea';
 
 export { Textarea };

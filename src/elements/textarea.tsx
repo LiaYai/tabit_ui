@@ -1,5 +1,5 @@
-import { Textarea as TextareaUI} from '@/components/ui/textarea';
+import { Textarea as TextareaUI } from '@/components/ui/textarea';
 
 export function Textarea() {
-	return <TextareaUI placeholder="Text" />;
+	return <TextareaUI placeholder="label" />;
 }
