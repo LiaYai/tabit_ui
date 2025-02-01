@@ -1,7 +1,7 @@
-import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from 'react';
+import { cva, type VariantProps } from 'class-variance-authority'
+import * as React from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
 const inputVariants = cva(
 	'flex w-full border border-2 hover:border-border-hover active:border-border-active rounded-lg bg-transparent text-base transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',
@@ -15,6 +15,8 @@ const inputVariants = cva(
 			},
 			size: {
 				default: 'py-2.5 px-3',
+				sm: 'py-1.5 px-2',
+				lg: 'py-3 px-4 text-lg',
 			},
 		},
 		defaultVariants: {
@@ -48,6 +50,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 					type={type}
 					className={cn(inputVariants({ variant, size, className }))}
 					ref={ref}
+					aria-invalid={variant == 'error' ? 'true' : undefined}
+					aria-describedby={message ? 'input-message' : undefined}
+					role={tooltipMessage ? 'tooltip' : undefined}
 					{...props}
 				/>
 				{icon && (
@@ -58,7 +63,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 						{icon}
 					</span>
 				)}
-				{message && <span className="absolute">{message}</span>}
+				{message && (
+    <span id="input-message" className={cn("absolute text-sm bottom-12 left-0", variant === 'error' && "text-red-500")}>
+        {message}
+    </span>
+)}
 			</div>
 		);
 	}
@@ -66,4 +75,5 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
 Input.displayName = 'Input';
 
-export { Input };
+export { Input }
+
