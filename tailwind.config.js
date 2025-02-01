@@ -6,11 +6,6 @@ export default {
 	safelist: ['light', 'dark'],
 	theme: {
 		extend: {
-			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)',
-			},
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
@@ -55,6 +50,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['NunitoSans', ...defaultTheme.fontFamily.sans],
+				manrope: ['Manrope', ...defaultTheme.fontFamily.sans]
 			},
 		},
 	},
