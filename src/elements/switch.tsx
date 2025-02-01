@@ -12,8 +12,17 @@ export const SwitchElement = ({ id, label, ...props }: SwitchElementProps) => {
 	const switchId = id || generatedId;
 	return (
 		<div className="flex items-center gap-2">
-			<Switch data-testid="Switch" id={switchId} aria-labelledby={label ? `${switchId}-label` : undefined} {...props} />
-			{label && <Label id={`${switchId}-label`} htmlFor={switchId}>{label}</Label>}
+			<Switch
+				data-testid="Switch"
+				id={switchId}
+				aria-labelledby={label ? `${switchId}-label` : undefined}
+				{...props}
+			/>
+			{label && (
+				<Label id={`${switchId}-label`} htmlFor={switchId}>
+					{label}
+				</Label>
+			)}
 		</div>
 	);
 };
