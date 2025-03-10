@@ -1,74 +1,50 @@
-# React UI-library for Tabit project
+# Библиотека компонентов для сайта Tabit
 
-Stack: 
-- React 18
-- TypeScript 5
-- Dart SASS \ SCSS
+В рамках учебного проекта создала два компонента, которые были разработаны в отдельных ветках и интегрированы с использованием **Tailwind CSS** и **shadcn**. Для демонстрации и тестирования компонентов был использован **Storybook**.
 
-Toolset:
-- Yarn + PNP, zero install ready
-- Vite
-- Storybook + Playwright tests
-- ESlint
-- Prettier
-- Husky + lint-staged
-- generate-react-cli configuration
+## Установка и запуск
 
-# Installation
+1. **Клонируйте репозиторий:**
 
-1. Clone repository
-2. cd DIR
-3. yarn
+   ```bash
+   git clone
+   ```
+2. **Установите зависимости:**
 
-# Commands
+   ```bash
+   yarn
+   ```
+3. **Запустите проект:**
 
-### Create new component
-`yarn gen component Name` — place new component files in src/components including CSS module and story.
+   ```bash
+   yarn dev
+   ```
+4. **Запустите Storybook для просмотра компонентов:**
 
-src/components/Name/
-├── Name.tsx
-├── Name.module.css
-├── Name.stories.tsx
+   ```bash
+   yarn storybook
+   ```
 
-`yarn gen component Name --withLazy=true` — like first, but add index.ts file with default lazy export of component for federation, pages and etc.
+## Компоненты
 
----
-### Run in watch mode 
-`yarn dev` — just execute build --watch for rebuild on changes, usefull when this repo used as dependency somewhere else. 
+В проекте были разработаны следующие компоненты:
 
----
+### 1. Multiselect Component
 
-### Build library
-`yarn build` — required for publishing library or using in other packages as dependency.
+- **Ветка:** `feat/#44267654_multyselect-component`  
+- **Описание:** Компонент для выбора нескольких элементов из списка.  
+- **Технологии:** Tailwind CSS, shadcn.  
+- **Storybook:** Доступен в Storybook для просмотра и тестирования.  
 
-`yarn build-storybook` — used for publishing storybook build somewhere like chromatic.
+### 2. Switch-toggle
 
----
+- **Ветка:** `feat/#44200022_switch-component`  
+- **Описание:** Описание второго компонента.  
+- **Технологии:** Tailwind CSS, shadcn.  
+- **Storybook:** Доступен в Storybook для просмотра и тестирования.  
 
-### Check code quality
-`yarn lint` — execute eslint
-`yarn format` — format code in src/
-`yarn test` — execute all tests, initial include only storybook tests
+## Используемые технологии
 
-### Developing
-`yarn storybook` — main development environment.
-
-# Do as follows:
-1. generate new component
-2. define prop types
-3. write a story
-4. write a play function for key use cases
-5. develop component while looking to story preview
-6. add more use cases playbooks
-
-# Naming conventions
-
-Prefixed names:
-- `Layout*` — global page Layout, top-level component of every page or screen
-- `Section*` — second level component under Layout
-- `Card*` — box content wrapper for column based content presentation
-
-Postfixed names:
-- `*Page` — top level component for building page including Layout and all under
-- `*Screen` — middle level component for building large part of page, screen flow, modal content and etc. Don't include top-level Layouts.
-- `*Flow` — group of screens combined with internal routing logic.
+- **Tailwind CSS** - утилитарный CSS-фреймворк для быстрого создания пользовательских интерфейсов.  
+- **shadcn** - библиотека для создания компонентов с использованием Tailwind.  
+- **Storybook** - инструмент для разработки и тестирования UI-компонентов.  
